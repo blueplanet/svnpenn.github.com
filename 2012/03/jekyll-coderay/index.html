@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+
+<title>Jekyll With Coderay</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>Jekyll With Coderay</h2>
+	
+	<h3 id="install-mingw">Install MinGW</h3>
+<ul>
+  <li>
+    <p><a href="http://sourceforge.net/projects/mingw/files/Installer/mingw-get-inst">sourceforge.net/projects/mingw/files/Installer/mingw-get-inst</a></p>
+  </li>
+  <li>C Compiler</li>
+  <li>MSYS Basic System</li>
+</ul>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Install dependencies</span>
+mingw-get install msys-patch
+mingw-get install msys-wget
+</pre></div>
+</div>
+</div>
+
+<h3 id="install-ruby">Install Ruby</h3>
+<p>Jekyll requires Ruby 1.9.1 or higher</p>
+
+<ul>
+  <li><a href="http://github.com/mojombo/jekyll/wiki/install">github.com/mojombo/jekyll/wiki/install</a></li>
+  <li><a href="http://rubyinstaller.org">rubyinstaller.org</a></li>
+</ul>
+
+<h3 id="install-jekyll">Install Jekyll</h3>
+<pre><code>gem install jekyll --no-ri --no-rdoc
+</code></pre>
+
+<h3 id="install-coderay">Install Coderay</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>gem install coderay
+<span class="comment"># Install Bash scanner</span>
+<span class="function">cd</span> /c/Ruby*/lib/ruby/gems/*/gems/coderay*/lib/coderay/scanners
+wget --no-check-certificate \
+github.com/pejuko/coderay_bash/raw/master/lib/coderay/scanners/bash.rb
+<span class="function">cd</span> -
+</pre></div>
+</div>
+</div>
+
+<h3 id="generate-css">Generate CSS</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>coderay stylesheet &gt; coderay.css
+<span class="comment"># Patch    </span>
+wget --no-check-certificate \
+github.com/svnpenn/dotfiles/raw/master/etc/coderay-css.diff
+patch &lt; coderay-css.diff
+cp coderay.css /c/home/GitHub/svnpenn.github.com/css
+</pre></div>
+</div>
+</div>
+
+<h3 id="set-configyml">Set _config.yml</h3>
+<pre><code>markdown: kramdown
+kramdown:
+ use_coderay: true
+ coderay:
+  coderay_css: class
+  coderay_line_numbers:
+</code></pre>
+
+<h3 id="set-post">Set post</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>{:lang=<span class="string">'bash'</span><span class="reserved">}</span>
+<span class="comment">    # This is example code</span>
+    blah blah blah
+    qwer qwer qwer
+</pre></div>
+</div>
+</div>
+
+<h3 id="use">Use</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>jekyll --auto --server
+<span class="comment"># and then browse to localhost:4000</span>
+</pre></div>
+</div>
+</div>
+
+<h3 id="links">Links</h3>
+<ul>
+  <li><a href="http://github.com/rubychan/coderay">github.com/rubychan/coderay</a></li>
+  <li><a href="http://github.com/wbzyl/coderay/commit/f1aab">github.com/wbzyl/coderay/commit/f1aab</a></li>
+</ul>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+
+<title>Build RtmpDump with PolarSSL 1.0.0</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>Build RtmpDump with PolarSSL 1.0.0</h2>
+	
+	<div><div class="CodeRay">
+  <div class="code"><pre><span class="directive">#!/bin/sh</span>
+<span class="comment"># This install requires MSYS Base System.</span>
+<span class="comment"># I prefer this over installing MinGW Developer Toolkit.</span>
+
+<span class="comment"># Install dependencies</span>
+mingw-get install libz
+mingw-get install msys-perl
+mingw-get install msys-wget
+
+<span class="comment"># Install PolarSSL</span>
+wget polarssl.org/code/releases/polarssl-<span class="float">1.0.0-</span>gpl.tgz
+tar xf polarssl*
+<span class="function">cd</span> polarssl*
+<span class="comment"># SYS_LDFLAGS=-lws2_32 is only needed for APPS, which we are not using.</span>
+make <span class="instance-variable">CC</span>=gcc <span class="instance-variable">APPS</span>=
+make <span class="instance-variable">DESTDIR</span>=/mingw install
+<span class="function">cd</span> -
+
+<span class="comment"># Install RtmpDump</span>
+git clone git<span class="reserved">:</span>//git.ffmpeg.org/rtmpdump
+<span class="function">cd</span> rtmpdump
+<span class="comment"># Add tag</span>
+git tag <span class="string">'v2.4'</span> <span class="string">'3121324'</span>
+<span class="comment"># Build</span>
+make <span class="instance-variable">SHARED</span>= <span class="instance-variable">SYS</span>=mingw <span class="instance-variable">CRYPTO</span>=POLARSSL <span class="instance-variable">XLDFLAGS</span>=-static \
+<span class="instance-variable">VERSION</span>=<span class="shell">$(git describe --tags)</span>
+<span class="comment"># Build librtmp.dll</span>
+make <span class="instance-variable">SYS</span>=mingw <span class="instance-variable">CRYPTO</span>=POLARSSL
+</pre></div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>

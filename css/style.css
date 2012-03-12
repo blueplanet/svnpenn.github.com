@@ -1,0 +1,57 @@
+/* Helvetica is not free superuser.com/q/94992 */
+h1 {
+font-size: 3em;
+text-align: center;
+text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+body {
+background-color: #C0A154;
+background-image: url(/images/background.png);
+font-family: Arial;
+}
+code, pre {
+/* If you use "em" the fonts will be different sizes */
+font: 15px/1.4 Lucida Console;
+white-space: pre-wrap;
+}
+code, pre, table {
+background: white;
+border: 1px solid #ccc;
+border-radius: 3px;
+padding: 3px 3px 2px;
+}
+pre code, table code {
+/* In these blocks pre
+is already padded */
+border: 0;
+padding: 0;
+}
+[alt=width2] {
+width: 98%;
+}
+[alt=width1] {
+width: 58%;
+}
+img {
+background: white;
+border: 1px solid #ccc;
+border-radius: 0.5em;
+display: block;
+margin: auto;
+padding: 0.5em;
+}
+h2 {
+/* top margin was messing
+up #container padding */
+font-size: 2em;
+margin: 0;
+}
+h1 a { color: white; }
+a:hover { text-decoration: underline; }
+a, h1 a:hover { text-decoration: none; }
+#container {
+background: url(/images/background.png);
+margin: auto;
+padding: 1em;
+width: 50em;
+}

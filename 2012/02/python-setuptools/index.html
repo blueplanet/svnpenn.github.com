@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+
+<title>Python setuptools</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>Python setuptools</h2>
+	
+	<h3 id="install-python">Install Python</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="function">cd</span> /c/home/Steven/Downloads
+<span class="comment"># setuptools does not work with Python 3.2</span>
+wget -nc <span class="string">'python.org/ftp/python/2.7.2/python-2.7.2.amd64.msi'</span>
+msiexec -qn -i <span class="string">'python-2.7.2.amd64.msi'</span> <span class="instance-variable">ADDLOCAL</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">DefaultFeature</span><span class="delimiter">&quot;</span></span>
+</pre></div>
+</div>
+</div>
+
+<h3 id="install-setuptools">Install setuptools</h3>
+<pre><code>wget peak.telecommunity.com/dist/ez_setup.py
+./ez_setup.py
+</code></pre>
+
+<h3 id="links">Links</h3>
+<ul>
+  <li><a href="http://pypi.python.org/pypi/setuptools">pypi.python.org/pypi/setuptools</a></li>
+  <li><a href="http://stackoverflow.com/questions/5319215">stackoverflow.com/questions/5319215</a></li>
+</ul>
+
+
+
+</div>
+</body>
+</html>

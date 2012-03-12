@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+
+<title>Download From Hulu With get-flash-videos</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>Download From Hulu With get-flash-videos</h2>
+	
+	<h3 id="programs">Programs</h3>
+<ul>
+  <li>
+    <p><a href="http://rtmpdump.mplayerhq.hu">RtmpDump</a></p>
+  </li>
+  <li>
+    <p><a href="http://strawberryperl.com">Perl</a> get 32-bit</p>
+  </li>
+  <li>
+    <p><a href="http://get-flash-videos.googlecode.com">get-flash-videos</a> get combined version</p>
+  </li>
+</ul>
+
+<h3 id="use">Use</h3>
+<div>
+  <pre><code class="bat">:: Rename
+ren &quot;combined-get_flash_videos-1.24&quot; &quot;get_flash_videos&quot;
+
+:: Install Hulu plugin
+perl get_flash_videos --add-plugin http://gitorious.org/get-flash-videos-plugins/gfv-plugins/blobs/raw/release/Hulu.pm
+
+:: Download by URL
+perl get_flash_videos http://www.hulu.com/watch/195075/house-small-sacrifices
+
+:: Download by search
+perl get_flash_videos house
+
+:: get-flash-videos might not work if BitTorrent is running.</code></pre>
+</div>
+
+<h3 id="links">Links</h3>
+<ul>
+  <li><a href="http://gitorious.org/get-flash-videos-plugins/pages/Hulu">gitorious.org/get-flash-videos-plugins/pages/Hulu</a></li>
+  <li><a href="http://gitorious.org/get-flash-videos-plugins/gfv-plugins/blobs/history/master/Hulu.pm">gitorious.org/get-flash-videos-plugins/gfv-plugins/blobs/history/master/Hulu.pm</a></li>
+</ul>
+
+<p><img src="/images/2012/get-flash-videos.png" alt="width2" /></p>
+
+
+
+</div>
+</body>
+</html>

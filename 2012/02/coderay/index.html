@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+
+<title>Coderay</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>Coderay</h2>
+	
+	<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Ruby193/lib/ruby/gems/1.9.1/gems/coderay-1.0.5/lib/coderay/scanners/bash.rb</span>
+<span class="instance-variable">numtest</span>=<span class="integer">123456</span>
+<span class="reserved">for</span> i <span class="reserved">in</span> /c/home/GitHub/*/
+<span class="reserved">do</span>
+    clear
+    <span class="function">cd</span> <span class="instance-variable">$i</span>
+    git status
+    <span class="function">echo</span>
+    <span class="function">echo</span> <span class="instance-variable">$i</span>
+    <span class="function">read</span>
+<span class="reserved">done</span>
+</pre></div>
+</div>
+</div>
+
+<h3 id="configyml">_config.yml</h3>
+<pre><code>markdown: kramdown
+kramdown:
+ use_coderay: true
+ coderay:
+  coderay_css: class
+  coderay_line_numbers:
+</code></pre>
+
+<h3 id="links">Links</h3>
+<ul>
+  <li><a href="http://github.com/rubychan/coderay/blob/master/etc/todo/scanners/bash-Anh%20Ky%20Huynh.rb">etc/todo/scanners/bash-Anh Ky Huynh.rb</a></li>
+  <li><a href="http://github.com/rubychan/coderay/blob/master/etc/todo/scanners/bash.rb">etc/todo/scanners/bash.rb</a></li>
+  <li><a href="http://github.com/pejuko/coderay_bash">github.com/pejuko/coderay_bash</a></li>
+  <li><a href="http://github.com/wbzyl/coderay">github.com/wbzyl/coderay</a></li>
+  <li><a href="http://jason.the-graham.com/2010/11/21/kramdown_support_for_jekyll">jason.the-graham.com/2010/11/21/kramdown_support_for_jekyll</a></li>
+</ul>
+
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+
+<title>Set default program for opening files</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>Set default program for opening files</h2>
+	
+	<div>
+  <pre><code class="bat">:: Scripts will still need an extension
+:: because of GitHub. If you leave out the %1 it
+:: will just open a blank notepad.
+
+ftype no_ext=notepad &quot;%1&quot;
+
+assoc .=no_ext</code></pre>
+</div>
+
+<ul>
+  <li><a href="http://stackoverflow.com/questions/9027584">stackoverflow.com/questions/9027584</a></li>
+  <li><a href="http://superuser.com/questions/13653">superuser.com/questions/13653</a></li>
+</ul>
+
+
+
+</div>
+</body>
+</html>

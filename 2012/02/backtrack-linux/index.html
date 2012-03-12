@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+
+<title>BackTrack Linux</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>BackTrack Linux</h2>
+	
+	<p>BackTrack is an operating system based on the Ubuntu GNU/Linux distribution
+aimed at digital forensics and penetration testing use. It is named after
+backtracking, a search algorithm. The current version is BackTrack 5, code name
+&ldquo;Revolution.&rdquo;</p>
+
+<h3 id="download">Download</h3>
+<p><a href="http://backtrack-linux.org">backtrack-linux.org</a></p>
+
+<ul>
+  <li>WM Flavor = GNOME</li>
+  <li>Arch = 64</li>
+  <li>Image = ISO</li>
+</ul>
+
+<h3 id="install">Install</h3>
+<p><a href="http://unetbootin.sourceforge.net">unetbootin.sourceforge.net</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><strong>Operating system</strong></th>
+      <th><strong>Device</strong></th>
+      <th><strong>Type</strong></th>
+      <th><strong>Mount point</strong></th>
+      <th><strong>Format</strong></th>
+      <th><strong>Size</strong></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Windows 7 loader</td>
+      <td>/dev/sda1</td>
+      <td>NTFS</td>
+      <td><!----></td>
+      <td><!----></td>
+      <td>100 MB</td>
+    </tr>
+    <tr>
+      <td>Windows 7</td>
+      <td>/dev/sda2</td>
+      <td>NTFS</td>
+      <td><!----></td>
+      <td><!----></td>
+      <td>900 GB</td>
+    </tr>
+    <tr>
+      <td>BackTrack</td>
+      <td>/dev/sda5</td>
+      <td>ext4</td>
+      <td>/</td>
+      <td>Yes</td>
+      <td>100 GB</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li>Install boot loader = Yes</li>
+  <li>Device for boot loader installation = /dev/sda</li>
+  <li>Kernel should be 2.6.39.4
+<code>uname -r</code></li>
+</ul>
+
+<h3 id="notes">Notes</h3>
+<p>GRUB must be installed whether you use it or not.</p>
+
+<h3 id="links">Links</h3>
+<ul>
+  <li><a href="http://askubuntu.com/questions/7865">askubuntu.com/questions/7865</a></li>
+  <li><a href="http://blog.sudobits.com/2011/07/30/how-to-uninstall-ubuntu">blog.sudobits.com/2011/07/30/how-to-uninstall-ubuntu</a></li>
+  <li><a href="http://blogs.technet.com/b/port25/archive/2006/10/13/http-port25-technet-com-archive-2006-10-12-windows-and-linux-integration-3a00-a-conversation-with-the-author-aspx.aspx">blogs.technet.com/b/port25/archive/2006/10/13/http-port25-technet-com-archive-2006-10-12-windows-and-linux-integration-3a00-a-conversation-with-the-author-aspx.aspx</a></li>
+</ul>
+
+<p><img src="http://svnpenn.github.com/images/2011/backtrack-linux.png" alt="width1" /></p>
+
+
+
+</div>
+</body>
+</html>

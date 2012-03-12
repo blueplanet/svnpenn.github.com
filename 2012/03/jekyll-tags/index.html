@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+
+<title>Jekyll Tags</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>Jekyll Tags</h2>
+	
+	<p>Our journey starts at</p>
+
+<ul>
+  <li><a href="http://github.com/mojombo/jekyll/wiki/yaml-front-matter">github.com/mojombo/jekyll/wiki/yaml-front-matter</a>.</li>
+</ul>
+
+<p>Here we discover that we can add either <code>categories</code> or <code>tags</code> to posts.</p>
+
+<h3 id="what-is-the-difference">What is the difference?</h3>
+
+<ul>
+  <li><a href="http://stackoverflow.com/q/8675841">stackoverflow.com/q/8675841</a></li>
+</ul>
+
+<p>Tags are simpler, so I will go with those.</p>
+
+<h3 id="tag-pages">Tag pages</h3>
+<p>Standard Jekyll can understand tags. The next task is creating tag pages. I
+could manually create a page for each tag, but that would be violating <a href="http://wikipedia.org/wiki/Don't_repeat_yourself">DRY</a>.
+The better option would be a script that generates a page for each tag.</p>
+
+<p>Several solutions exist to solve this problem. First I will list some of them. I
+would like to avoid gists in lieu of something more &ldquo;official&rdquo;. I will not fork
+Jekyll as to avoid maintaining the fork.</p>
+
+<ul>
+  <li>
+    <p><a href="http://github.com/rfelix/my_jekyll_extensions">github.com/rfelix/my_jekyll_extensions</a>: Has tag pages, tag cloud, and
+monthly archives.</p>
+  </li>
+  <li>
+    <p><a href="http://github.com/recurser/jekyll-plugins">github.com/recurser/jekyll-plugins</a>: Has category pages but not tag pages.</p>
+  </li>
+  <li>
+    <p><a href="http://github.com/pattex/jekyll-tagging">github.com/pattex/jekyll-tagging</a>: Has tag pages and tag cloud.</p>
+  </li>
+  <li>
+    <p><a href="http://github.com/plusjade/jekyll-bootstrap">github.com/plusjade/jekyll-bootstrap</a>: The tags page has all posts grouped
+by tag. What we need is a page for each tag. This repo does have nice themes
+though.</p>
+  </li>
+</ul>
+
+<h3 id="fin">Fin</h3>
+<p>When finished I should post my findings to <a href="http://stackoverflow.com/q/1408824">Stack Overflow</a>.</p>
+
+
+
+</div>
+</body>
+</html>
