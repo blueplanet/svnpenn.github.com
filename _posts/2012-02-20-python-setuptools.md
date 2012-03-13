@@ -19,6 +19,4 @@ tags:
 
 ### Links
 * [pypi.python.org/pypi/setuptools](http://pypi.python.org/pypi/setuptools)
-* [stackoverflow.com/questions/5319215][s]
-
-[s]:http://stackoverflow.com/questions/5319215
+* [stackoverflow.com/q/5319215](http://stackoverflow.com/q/5319215)
