@@ -9,6 +9,7 @@
 # Style
 * [blog.hypsometry.com](http://blog.hypsometry.com)
 * [faeu.org](http://faeu.org)
+* [owni.eu/2012/03/08/copyright-patent-monopoly-stifle-innovation-falkvinge][w]
 * [saltycrane.com/blog](http://www.saltycrane.com/blog)
 
 [a]:http://arademaker.github.com/blog/2011/12/01/github-pages-jekyll-plugins
@@ -16,3 +17,4 @@
 [i]:http://github.github.com/github-flavored-markdown/preview
 [o]:http://loose-bits.com/2011/09/16/moving-to-jekyll
 [s]:http://softwaremaniacs.org/playground/showdown-highlight
+[w]:http://owni.eu/2012/03/08/copyright-patent-monopoly-stifle-innovation-falkvinge
