@@ -1,10 +1,19 @@
-/* Helvetica is not free superuser.com/q/94992 */
+blockquote {
+background: #e8e8e8;
+border: 1px solid #ccc;
+border-radius: 0.5em;
+color: #4f4f4f;
+font-style: italic;
+margin: 0;
+padding: 0.5em 2em;
+}
 h1 {
 font-size: 3em;
 text-align: center;
 text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
 }
 body {
+/* Helvetica is not free superuser.com/q/94992 */
 background-color: #C0A154;
 background-image: url(/images/background.png);
 font-family: Arial;
