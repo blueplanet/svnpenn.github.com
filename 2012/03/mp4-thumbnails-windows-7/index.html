@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<meta charset='utf-8'>
+
+<title>mp4 Thumbnails, Windows 7</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>mp4 Thumbnails, Windows 7</h2>
+	
+	<h3 id="install-ffmpeg">Install FFmpeg</h3>
+<ul>
+  <li><a href="http://ffmpeg.zeranoe.com">ffmpeg.zeranoe.com</a></li>
+</ul>
+
+<h3 id="install-atomicparsley">Install AtomicParsley</h3>
+<ul>
+  <li><a href="http://atomicparsley.sourceforge.net">atomicparsley.sourceforge.net</a></li>
+</ul>
+
+<h3 id="use">Use</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Extract frame</span>
+ffmpeg -ss <span class="integer">1000</span> -i video.mp4 -vframes <span class="integer">1</span> frame.png
+<span class="comment"># Set thumbnail</span>
+atomicparsley video.mp4 --artwork frame.png --overWrite
+<span class="comment"># Remove thumbnail</span>
+atomicparsley video.mp4 --artwork REMOVE_ALL --overWrite
+</pre></div>
+</div>
+</div>
+
+<p>Before
+<img src="/images/2012/mp4-thumbnails-windows-7-1.png" alt="width1" /></p>
+
+<p>After
+<img src="/images/2012/mp4-thumbnails-windows-7-2.png" alt="width1" /></p>
+
+<h3 id="links">Links</h3>
+<ul>
+  <li><a href="http://kerstetter.net/index.php/projects/software/metax">kerstetter.net/index.php/projects/software/metax</a></li>
+  <li><a href="http://mixzing.freeforums.org/mp4-m4v-video-metadata-t111.html">mixzing.freeforums.org/mp4-m4v-video-metadata-t111.html</a></li>
+  <li><a href="http://sevenforums.com/media-center/53961-use-picture-thumbnail-4.html">sevenforums.com/media-center/53961-use-picture-thumbnail-4.html</a></li>
+</ul>
+
+
+
+</div>
+</body>
+</html>
