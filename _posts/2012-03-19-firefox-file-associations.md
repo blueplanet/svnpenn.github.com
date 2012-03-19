@@ -1,5 +1,3 @@
-#!/bin/sh
-
 ---
 layout: post
 title: Firefox File Associations
