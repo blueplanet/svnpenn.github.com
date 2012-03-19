@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset='utf-8'>
+
+<title>Firefox File Associations</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>Firefox File Associations</h2>
+	
+	<div><div class="CodeRay">
+  <div class="code"><pre><span class="directive">#!/bin/sh</span>
+reg delete <span class="string">'HKLM\SOFTWARE\Classes\FirefoxHTML\ShellEx\IconHandler'</span>
+<span class="instance-variable">icon</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$PROGRAMW6432</span><span class="content">\P</span><span class="content">ale Moon</span><span class="content">\p</span><span class="content">alemoon.exe,1</span><span class="delimiter">&quot;</span></span>
+cmd /c <span class="string"><span class="delimiter">&quot;</span><span class="content">reg add HKCR</span><span class="content">\F</span><span class="content">irefoxHTML</span><span class="content">\D</span><span class="content">efaultIcon /d </span><span class="content">\&quot;</span><span class="instance-variable">$icon</span><span class="content">\&quot;</span><span class="delimiter">&quot;</span></span>
+cmd /c <span class="string"><span class="delimiter">&quot;</span><span class="content">reg add HKCR</span><span class="content">\A</span><span class="content">pplications</span><span class="content">\p</span><span class="content">alemoon.exe</span><span class="content">\D</span><span class="content">efaultIcon /d </span><span class="content">\&quot;</span><span class="instance-variable">$icon</span><span class="content">\&quot;</span><span class="delimiter">&quot;</span></span>
+</pre></div>
+</div>
+</div>
+
+<p>Reload explorer</p>
+
+<h3 id="links">Links</h3>
+<ul>
+  <li><a href="http://sevenforums.com/tutorials/19449-default-file-type-associations-restore.html">sevenforums.com/tutorials/19449-default-file-type-associations-restore.html</a></li>
+  <li><a href="http://sevenforums.com/tutorials/57455-file-extension-icon-change-default-icon.html">sevenforums.com/tutorials/57455-file-extension-icon-change-default-icon.html</a></li>
+</ul>
+
+
+
+</div>
+</body>
+</html>

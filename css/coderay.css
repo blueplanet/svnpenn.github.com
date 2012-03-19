@@ -91,6 +91,7 @@ table.CodeRay td { padding: 2px 4px; vertical-align: top; }
 .CodeRay .string .char { color: #b0b }
 .CodeRay .string .content { color: #008080 }
 .CodeRay .string .delimiter { color: #008080 }
+.CodeRay .string .instance-variable { color: #008080 }
 .CodeRay .string .modifier { color: #E40 }
 .CodeRay .string { color:#d14 }
 .CodeRay .symbol .content { color:#A60 }
