@@ -9,8 +9,8 @@ tags:
 	#!/bin/sh
 	reg delete 'HKLM\SOFTWARE\Classes\FirefoxHTML\ShellEx\IconHandler'
 	icon="$PROGRAMW6432\Pale Moon\palemoon.exe,1"
-	cmd /c "reg add HKCR\FirefoxHTML\DefaultIcon /d \"$icon\""
-	cmd /c "reg add HKCR\Applications\palemoon.exe\DefaultIcon /d \"$icon\""
+	reg add 'HKCR\FirefoxHTML\DefaultIcon' -d "$icon"
+	reg add 'HKCR\Applications\palemoon.exe\DefaultIcon' -d "$icon"
 
 Reload explorer
 
