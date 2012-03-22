@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Create RtmpDump Distribution
+title: Make a commit from a patch
 tags:
  - Windows
 ---
 
 {:lang='bash'}
 ~~~
-{% include rtmpdump-dist.sh %}
+{% include rtmpdump-patch.sh %}
 ~~~
