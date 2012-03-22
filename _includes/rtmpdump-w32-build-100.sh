@@ -1,10 +1,10 @@
 #!/bin/sh
 # This install requires MSYS Base System.
 # I prefer this over installing MinGW Developer Toolkit.
+PATH=/bin:/mingw/bin:/c/Git/bin
 
 # Install dependencies
 mingw-get install libz
-mingw-get install msys-perl
 mingw-get install msys-wget
 
 # Install PolarSSL
