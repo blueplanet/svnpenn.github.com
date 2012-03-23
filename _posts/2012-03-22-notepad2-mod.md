@@ -8,8 +8,9 @@ tags:
 ![width1](/images/2012/sparrow.jpg)
 
 ### Configure
-* View, Default Font, Lucida Console
 * View, Code Folding, No
+* View, Customize Schemes, Ruby Script, Keyword, `bold; fore:#00007F`
+* View, Default Font, Lucida Console
 
 ### Links
 * [code.google.com/p/notepad2-mod](http://code.google.com/p/notepad2-mod)
