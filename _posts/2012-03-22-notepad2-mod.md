@@ -9,7 +9,16 @@ tags:
 
 ### Configure
 * View, Code Folding, No
-* View, Customize Schemes, Ruby Script, Keyword, `bold; fore:#00007F`
+
+
+* View, Customize Schemes, Ruby Script, Associated filename extensions
+
+	`rb; ruby; rbw; rake; rjs; Rakefile; gemspec`
+
+* View, Customize Schemes, Ruby Script, Keyword
+
+	`bold; fore:#00007F`
+
 * View, Default Font, Lucida Console
 
 ### Links
