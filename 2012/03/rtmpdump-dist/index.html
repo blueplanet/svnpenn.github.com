@@ -29,7 +29,7 @@ mingw-get install msys-coreutils
 <span class="instance-variable">rtmpdump_version</span>=<span class="shell"><span class="delimiter">$(</span>git describe --tags<span class="delimiter">)</span></span>
 <span class="comment"># stackoverflow.com/questions/1253828</span>
 <span class="instance-variable">rtmpdump_timestamp</span>=<span class="shell"><span class="delimiter">$(</span>date -d <span class="string"><span class="delimiter">&quot;</span><span class="shell"><span class="delimiter">$(</span><span class="content">stat -c %z rtmpdump.exe</span><span class="delimiter">)</span></span><span class="delimiter">&quot;</span></span><span class="delimiter">)</span></span>
-<span class="instance-variable">distdir</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$d</span><span class="content">/rtmpdump-</span><span class="shell"><span class="delimiter">$(</span><span class="content">git describe --tags</span><span class="delimiter">)</span></span><span class="delimiter">&quot;</span></span>
+<span class="instance-variable">distdir</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$d</span><span class="content">/rtmpdump-svnpenn-</span><span class="instance-variable">$rtmpdump_version</span><span class="delimiter">&quot;</span></span>
 mkdir <span class="instance-variable">$distdir</span>
 
 cp rtmpdump.exe <span class="instance-variable">$distdir</span>
