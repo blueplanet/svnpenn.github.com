@@ -11,6 +11,6 @@ tags:
 ~~~
 
 ### Links
-* [github.com/svnpenn/dotfiles/blob/master/bash/rtmpdump-dist.sh][g]
+* [github.com/svnpenn/dotfiles/blob/master/bin/rtmpdump-dist.sh][g]
 
 [g]:http://github.com/svnpenn/dotfiles/blob/master/bin/rtmpdump-dist.sh
