@@ -21,38 +21,39 @@
 	<div><div class="CodeRay">
   <div class="code"><pre><span class="directive">#!/bin/sh</span>
 <span class="comment"># Create a commit from a patch</span>
+<span class="instance-variable">patch_author</span>=KSV
+<span class="instance-variable">patch_branch</span>=KSV
+<span class="instance-variable">patch_file</span>=Patch.diff
+<span class="instance-variable">url_mine</span>=git@github.com<span class="reserved">:</span>svnpenn/rtmpdump.git
+<span class="instance-variable">url_upstream</span>=git<span class="reserved">:</span>//git.ffmpeg.org/rtmpdump
+<span class="comment">########################################################################</span>
 mingw-get install msys-coreutils
 
 <span class="comment"># Get my repo</span>
-git clone git@github.com<span class="reserved">:</span>svnpenn/rtmpdump.git dir_dest
-<span class="function">cd</span> dir_dest
-git checkout KSV
+git clone <span class="instance-variable">$url_mine</span> dir_mine
+<span class="function">cd</span> dir_mine
+git checkout <span class="instance-variable">$patch_branch</span>
 <span class="comment"># Empty my repo, except &quot;.git&quot;</span>
-<span class="function">echo</span> <span class="string">'Press enter to remove old files'</span><span class="delimiter">;</span> <span class="function">read</span>
 rm -r *
 <span class="function">cd</span> -
 
 <span class="comment"># Get upstream repo</span>
-git clone git<span class="reserved">:</span>//git.ffmpeg.org/rtmpdump dir_source
-<span class="function">cd</span> dir_source
-git apply ../*.diff <span class="integer">2</span>&gt;nul || git apply -p0 ../*.diff
+git clone <span class="instance-variable">$url_upstream</span> dir_upstream
+<span class="function">cd</span> dir_upstream
+git apply <span class="string"><span class="delimiter">&quot;</span><span class="content">../</span><span class="instance-variable">$patch_file</span><span class="delimiter">&quot;</span></span> <span class="integer">2</span>&gt;nul || git apply -p0 <span class="string"><span class="delimiter">&quot;</span><span class="content">../</span><span class="instance-variable">$patch_file</span><span class="delimiter">&quot;</span></span>
 <span class="comment"># Copy patched files over</span>
-<span class="function">echo</span> <span class="string">'Press enter to copy new files'</span><span class="delimiter">;</span> <span class="function">read</span>
-cp -r * ../dir_dest
+cp -r * ../dir_mine
 <span class="function">cd</span> -
 
 <span class="comment"># Get author modify time</span>
-<span class="instance-variable">modify_time</span>=<span class="shell"><span class="delimiter">$(</span>stat -c %y *.diff<span class="delimiter">)</span></span>
-<span class="function">echo</span> <span class="string"><span class="delimiter">&quot;</span><span class="content">Modify time (</span><span class="instance-variable">$modify_time</span><span class="content">)</span><span class="content">, press enter</span><span class="delimiter">&quot;</span></span><span class="delimiter">;</span> <span class="function">read</span>
-
-<span class="comment"># Get author</span>
-<span class="function">echo</span> <span class="string">'Enter author'</span>
-<span class="function">read</span> <span class="instance-variable">author</span>
+<span class="instance-variable">modify_time</span>=<span class="shell"><span class="delimiter">$(</span>stat -c %y <span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$patch_file</span><span class="delimiter">&quot;</span></span><span class="delimiter">)</span></span>
+<span class="function">echo</span> <span class="instance-variable">$modify_time</span>
 
 <span class="comment"># Commit</span>
-<span class="function">cd</span> dir_dest
+<span class="function">cd</span> dir_mine
 git add -A
-git commit --author <span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$author</span><span class="delimiter">&quot;</span></span> --date <span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$modify_time</span><span class="delimiter">&quot;</span></span>
+git commit --author <span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$patch_author</span><span class="delimiter">&quot;</span></span> --date <span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$modify_time</span><span class="delimiter">&quot;</span></span>
+
 </pre></div>
 </div>
 </div>

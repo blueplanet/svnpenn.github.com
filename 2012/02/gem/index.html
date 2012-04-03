@@ -18,19 +18,25 @@
 	
 	<h2>RubyGems</h2>
 	
-	<p>RubyGems is a package manager for the Ruby programming language that provides a
-standard format for distributing Ruby programs and libraries (in a
-self-contained format called a &ldquo;gem&rdquo;), a tool designed to easily manage the
-installation of gems, and a server for distributing them. RubyGems is now part
-of the standard library from Ruby version 1.9.</p>
+	<p>RubyGems is a package manager for the Ruby programming language that
+provides a standard format for distributing Ruby programs and libraries
+(in a self-contained format called a &ldquo;gem&rdquo;), a tool designed to easily
+manage the installation of gems, and a server for distributing them.
+RubyGems is now part of the standard library from Ruby version 1.9.</p>
 
-<h3 id="examples">Examples</h3>
+<h2 id="gemrc">~/.gemrc</h2>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>gem<span class="reserved">:</span> --no-ri --no-rdoc
+</pre></div>
+</div>
+</div>
+
+<h2 id="examples">Examples</h2>
 
 <div><div class="CodeRay">
   <div class="code"><pre><span class="comment"># Show the dependencies of an installed gem</span>
 gem dependency jekyll
-<span class="comment"># Install without docs</span>
-gem install jekyll --no-ri --no-rdoc
 <span class="comment"># Install certain version</span>
 gem install redcarpet --version=<span class="float">1.17.2</span>
 <span class="comment"># Display all gems</span>
