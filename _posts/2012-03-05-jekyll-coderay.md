@@ -23,7 +23,7 @@ Jekyll requires Ruby 1.9.1 or higher
 * [rubyinstaller.org](http://rubyinstaller.org)
 
 ### Install Jekyll
-	gem install jekyll --no-ri --no-rdoc
+	gem install jekyll
 
 ### Install Coderay
 
