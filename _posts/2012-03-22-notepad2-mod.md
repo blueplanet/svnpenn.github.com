@@ -18,6 +18,8 @@ tags:
 			* Keyword
 				* `bold; fore:#00007F`
 		* Shell Script
+			* Associated filename extensions
+				* `sh; profile`
 			* Here-doc (Delimeter)
 				* `fore:#008080`
 
