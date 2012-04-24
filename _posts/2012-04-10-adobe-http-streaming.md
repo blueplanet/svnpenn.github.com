@@ -15,8 +15,8 @@ importance is
 download.macromedia.com/pub/flashmediaserver/httpdynamicstreaming/vod/update/adobe_f4fpackager_4_5_1_windows_x64.zip
 download.macromedia.com/pub/flashmediaserver/httpdynamicstreaming/vod/update/adobe_f4fpackager_4_5_1_windows_x86.zip
 
-hdsvod.digitalconcerthall.com/z/specials/20120329_1_messiaen_turangalila/h264_high_,0700,1100,1500,2000,2500,.mp4.csmil/manifest.f4m
 hdsvod.digitalconcerthall.com/z/specials/20120329_1_messiaen_turangalila/h264_high_,0700,1100,1500,2000,2500,.mp4.csmil/4_e8775c2b4acd5464_Seg1-Frag1
+hdsvod.digitalconcerthall.com/z/specials/20120329_1_messiaen_turangalila/h264_high_,0700,1100,1500,2000,2500,.mp4.csmil/manifest.f4m
 hdsvod.digitalconcerthall.com/z/specials/20120329_1_messiaen_turangalila/h264_high_2500.mp4
 
 ### Links
