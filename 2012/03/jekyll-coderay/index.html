@@ -53,8 +53,7 @@ mingw-get install msys-wget
   <div class="code"><pre>gem install coderay
 <span class="comment"># Install Bash scanner</span>
 <span class="function">cd</span> /c/Ruby*/lib/ruby/gems/*/gems/coderay*/lib/coderay/scanners
-wget --no-check-certificate \
-github.com/pejuko/coderay_bash/raw/master/lib/coderay/scanners/bash.rb
+wget github.com/pejuko/coderay_bash/raw/master/lib/coderay/scanners/bash.rb
 <span class="function">cd</span> -
 </pre></div>
 </div>
@@ -65,8 +64,7 @@ github.com/pejuko/coderay_bash/raw/master/lib/coderay/scanners/bash.rb
 <div><div class="CodeRay">
   <div class="code"><pre>coderay stylesheet &gt; coderay.css
 <span class="comment"># Patch    </span>
-wget --no-check-certificate \
-github.com/svnpenn/dotfiles/raw/master/etc/coderay-css.diff
+wget github.com/svnpenn/dotfiles/raw/master/etc/coderay-css.diff
 patch &lt; coderay-css.diff
 cp coderay.css /c/home/GitHub/svnpenn.github.com/css
 </pre></div>
