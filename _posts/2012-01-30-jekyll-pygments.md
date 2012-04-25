@@ -44,8 +44,7 @@ Jekyll requires Ruby 1.9.1 or higher
 	easy_install Pygments
 	# Patch Albino
 	cd /c/Ruby*/lib/ruby/gems/*/gems/albino-1.3.3
-	wget --no-check-certificate \
-	https://raw.github.com/gist/1185645/0001-albino-windows-refactor.patch
+	wget https://raw.github.com/gist/1185645/0001-albino-windows-refactor.patch
 	patch -p1 < 0001-albino-windows-refactor.patch
 
 ### Get CSS

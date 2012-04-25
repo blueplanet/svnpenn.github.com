@@ -31,8 +31,7 @@ Jekyll requires Ruby 1.9.1 or higher
 	gem install coderay
 	# Install Bash scanner
 	cd /c/Ruby*/lib/ruby/gems/*/gems/coderay*/lib/coderay/scanners
-	wget --no-check-certificate \
-	github.com/pejuko/coderay_bash/raw/master/lib/coderay/scanners/bash.rb
+	wget github.com/pejuko/coderay_bash/raw/master/lib/coderay/scanners/bash.rb
 	cd -
 
 ### Generate CSS
@@ -40,8 +39,7 @@ Jekyll requires Ruby 1.9.1 or higher
 {:lang='bash'}
 	coderay stylesheet > coderay.css
 	# Patch	
-	wget --no-check-certificate \
-	github.com/svnpenn/dotfiles/raw/master/etc/coderay-css.diff
+	wget github.com/svnpenn/dotfiles/raw/master/etc/coderay-css.diff
 	patch < coderay-css.diff
 	cp coderay.css /c/home/GitHub/svnpenn.github.com/css
 
