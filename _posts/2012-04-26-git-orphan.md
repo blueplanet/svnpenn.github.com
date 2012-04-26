@@ -16,7 +16,7 @@ tags:
 	# Local new master
 	git checkout --orphan master
 	git rm -rf .
-	<do work>
+	# do work
 	git add -A
 	git commit -m 'Initial commit'
 	# Remote new master
