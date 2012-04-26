@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset='utf-8'>
+
+<title>Install Jekyll with Cygwin</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>Install Jekyll with Cygwin</h2>
+	
+	<h2 id="install-cygwin-packages">Install Cygwin packages</h2>
+<ul>
+  <li>gcc4-core</li>
+  <li>git</li>
+  <li>make</li>
+  <li>ruby</li>
+  <li>wget</li>
+</ul>
+
+<h2 id="install-rubygems">Install Rubygems</h2>
+<p>wget rubyforge.org/frs/download.php/76032/rubygems-1.8.23.tgz
+tar xf rubygems*
+cd rubygems*
+ruby setup.rb install
+cd -</p>
+
+<h2 id="install-posix-spawn">Install posix-spawn</h2>
+<p>gem install rake-compiler
+git clone git://github.com/rtomayko/posix-spawn.git
+cd posix-spawn
+rake gem
+gem install pkg/posix-spawn-0.3.6
+cd -</p>
+
+<ul>
+  <li><a href="http://matt.scharley.me/2012/03/10/windows-cygwin-and-jekyll">matt.scharley.me/2012/03/10/windows-cygwin-and-jekyll</a></li>
+  <li><a href="http://stevenharman.net/blog/archive/2008/11/12/installing-rubygems-in-cygwin.aspx">stevenharman.net/blog/archive/2008/11/12/installing-rubygems-in-cygwin.aspx</a></li>
+</ul>
+
+<h2 id="install-jekyll">Install Jekyll</h2>
+<p>PATH=/bin
+gem install jekyll</p>
+
+
+
+</div>
+</body>
+</html>

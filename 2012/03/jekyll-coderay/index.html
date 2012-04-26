@@ -27,13 +27,10 @@
   <li>MSYS Basic System</li>
 </ul>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Install dependencies</span>
+<pre lang="bash"><code># Install dependencies
 mingw-get install msys-patch
 mingw-get install msys-wget
-</pre></div>
-</div>
-</div>
+</code></pre>
 
 <h3 id="install-ruby">Install Ruby</h3>
 <p>Jekyll requires Ruby 1.9.1 or higher</p>
@@ -49,27 +46,21 @@ mingw-get install msys-wget
 
 <h3 id="install-coderay">Install Coderay</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre>gem install coderay
-<span class="comment"># Install Bash scanner</span>
-<span class="function">cd</span> /c/Ruby*/lib/ruby/gems/*/gems/coderay*/lib/coderay/scanners
+<pre lang="bash"><code>gem install coderay
+# Install Bash scanner
+cd /c/Ruby*/lib/ruby/gems/*/gems/coderay*/lib/coderay/scanners
 wget github.com/pejuko/coderay_bash/raw/master/lib/coderay/scanners/bash.rb
-<span class="function">cd</span> -
-</pre></div>
-</div>
-</div>
+cd -
+</code></pre>
 
 <h3 id="generate-css">Generate CSS</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre>coderay stylesheet &gt; coderay.css
-<span class="comment"># Patch    </span>
+<pre lang="bash"><code>coderay stylesheet &gt; coderay.css
+# Patch	
 wget github.com/svnpenn/dotfiles/raw/master/etc/coderay-css.diff
 patch &lt; coderay-css.diff
 cp coderay.css /c/home/GitHub/svnpenn.github.com/css
-</pre></div>
-</div>
-</div>
+</code></pre>
 
 <h3 id="set-configyml">Set _config.yml</h3>
 <pre><code>markdown: kramdown
@@ -82,23 +73,17 @@ kramdown:
 
 <h3 id="set-post">Set post</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre>{:lang=<span class="string">'bash'</span><span class="reserved">}</span>
-<span class="comment">    # This is example code</span>
-    blah blah blah
-    qwer qwer qwer
-</pre></div>
-</div>
-</div>
+<pre lang="bash"><code>{:lang='bash'}
+	# This is example code
+	blah blah blah
+	qwer qwer qwer
+</code></pre>
 
 <h3 id="use">Use</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre>jekyll --auto --server
-<span class="comment"># and then browse to localhost:4000</span>
-</pre></div>
-</div>
-</div>
+<pre lang="bash"><code>jekyll --auto --server
+# and then browse to localhost:4000
+</code></pre>
 
 <h3 id="links">Links</h3>
 <ul>

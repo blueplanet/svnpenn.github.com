@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset='utf-8'>
+
+<title>Git orphan</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven&rsquo;s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>Git orphan</h2>
+	
+	<p><img src="/images/2012/git.jpg" alt="width1" /></p>
+
+<pre lang="bash"><code># Local rename
+git branch -m master master-old
+# Remote rename
+git push origin master-old
+git push origin :master
+# Local new master
+git checkout --orphan master
+git rm -rf .
+&lt;do work&gt;
+git add -A
+git commit -m 'Initial commit'
+# Remote new master
+git push origin master
+git push origin :master-old
+</code></pre>
+
+<ul>
+  <li><a href="http://stackoverflow.com/questions/1384325">In git, is there a simple way of introducing an unrelated branch to a repository?</a></li>
+  <li><a href="http://stackoverflow.com/q/1526794">git: rename remote branch</a></li>
+</ul>
+
+
+
+</div>
+</body>
+</html>

@@ -18,17 +18,14 @@
 	
 	<h2>Custom Windows 7 Taskbar</h2>
 	
-	<div><div class="CodeRay">
-  <div class="code"><pre><span class="directive">#!/bin/sh</span>
-<span class="comment"># support.microsoft.com?id=269269</span>
-<span class="comment"># Grant full control of aero.msstyles</span>
-<span class="function">cd</span> /c/Windows/Resources/Themes/Aero
-<span class="comment"># takeown /f aero.msstyles</span>
-<span class="comment"># icacls aero.msstyles /grant Users:f</span>
+	<pre lang="bash"><code>#!/bin/sh
+# support.microsoft.com?id=269269
+# Grant full control of aero.msstyles
+cd /c/Windows/Resources/Themes/Aero
+# takeown /f aero.msstyles
+# icacls aero.msstyles /grant Users:f
 mv aero.msstyles aero-old.msstyles
-</pre></div>
-</div>
-</div>
+</code></pre>
 
 <ul>
   <li><a href="/downloads/svnpenn/uxstyle/UxStyle_Core_jul13_bits.7z">UxStyle_Core_jul13_bits.7z</a></li>

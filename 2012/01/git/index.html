@@ -27,15 +27,12 @@ git apply -p0 Patch.diff
 
 <h3 id="branch">Branch</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Create a new branch</span>
+<pre lang="bash"><code># Create a new branch
 git branch nettle
-<span class="comment"># Remove a branch</span>
+# Remove a branch
 git branch -d nettle
-git push origin <span class="reserved">:</span>nettle
-</pre></div>
-</div>
-</div>
+git push origin :nettle
+</code></pre>
 
 <ul>
   <li><a href="http://book.git-scm.com/5_creating_new_empty_branches.html">book.git-scm.com/5_creating_new_empty_branches.html</a></li>
@@ -44,18 +41,15 @@ git push origin <span class="reserved">:</span>nettle
 
 <h3 id="checkout">Checkout</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Undo all local modifications</span>
-git checkout -f<span class="comment">    
-# Checkout parent of current commit</span>
+<pre lang="bash"><code># Undo all local modifications
+git checkout -f	
+# Checkout parent of current commit
 git checkout HEAD^
-<span class="comment"># Checkout old commit</span>
+# Checkout old commit
 git checkout SHA1
-<span class="comment"># Switch branch</span>
-git checkout <span class="reserved">[</span>name of the branch you want to switch to<span class="reserved">]</span>
-</pre></div>
-</div>
-</div>
+# Switch branch
+git checkout [name of the branch you want to switch to]
+</code></pre>
 
 <ul>
   <li><a href="http://linux.yyz.us/git-howto">linux.yyz.us/git-howto</a></li>
@@ -63,13 +57,10 @@ git checkout <span class="reserved">[</span>name of the branch you want to switc
 
 <h3 id="commit">Commit</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Get patch timestamp</span>
-ls --full-<span class="reserved">time</span> rtmpdump-http-proxy2.patch
-git commit -a --author <span class="string">'Daniel Burr &lt;dburr@topcon.com&gt;'</span> --date <span class="string">'2010-08-16 03:11:54 -0500'</span>
-</pre></div>
-</div>
-</div>
+<pre lang="bash"><code># Get patch timestamp
+ls --full-time rtmpdump-http-proxy2.patch
+git commit -a --author 'Daniel Burr &lt;dburr@topcon.com&gt;' --date '2010-08-16 03:11:54 -0500'
+</code></pre>
 
 <ul>
   <li><a href="http://doc.norang.ca/git-howto">doc.norang.ca/git-howto</a></li>
@@ -77,12 +68,9 @@ git commit -a --author <span class="string">'Daniel Burr &lt;dburr@topcon.com&gt
 
 <h3 id="filter-branch">Filter-branch</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Remove a file from every commit</span>
-git filter-branch --tree-filter <span class="string">'rm -f passwords.txt'</span> HEAD
-</pre></div>
-</div>
-</div>
+<pre lang="bash"><code># Remove a file from every commit
+git filter-branch --tree-filter 'rm -f passwords.txt' HEAD
+</code></pre>
 
 <ul>
   <li><a href="http://progit.org/book/ch6-4">progit.org/book/ch6-4</a></li>
@@ -90,14 +78,11 @@ git filter-branch --tree-filter <span class="string">'rm -f passwords.txt'</span
 
 <h3 id="format-patch">Format-patch</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># This will create a patch from last commit</span>
+<pre lang="bash"><code># This will create a patch from last commit
 git add -A
-git commit -m <span class="string">'Commit message'</span>
-git format-patch -<span class="integer">1</span>
-</pre></div>
-</div>
-</div>
+git commit -m 'Commit message'
+git format-patch -1
+</code></pre>
 
 <ul>
   <li><a href="http://stackoverflow.com/a/9256253/1002260">stackoverflow.com/a/9256253/1002260</a></li>
@@ -105,47 +90,38 @@ git format-patch -<span class="integer">1</span>
 
 <h3 id="log">Log</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Last 10 commits with diffs</span>
-git log -<span class="integer">10</span> -p
-<span class="comment"># Commits with abbreviated commit hash</span>
+<pre lang="bash"><code># Last 10 commits with diffs
+git log -10 -p
+# Commits with abbreviated commit hash
 git log --all --oneline
-</pre></div>
-</div>
-</div>
+</code></pre>
 
 <h3 id="merge">Merge</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Clone my repo</span>
-git clone git@github.com<span class="reserved">:</span>svnpenn/rtmpdump.git
-<span class="function">cd</span> rtmpdump
+<pre lang="bash"><code># Clone my repo
+git clone git@github.com:svnpenn/rtmpdump.git
+cd rtmpdump
 git checkout master
-<span class="comment"># Pull in upstream changes</span>
-git remote add upstream git<span class="reserved">:</span>//git.ffmpeg.org/rtmpdump 
+# Pull in upstream changes
+git remote add upstream git://git.ffmpeg.org/rtmpdump 
 git fetch upstream
 git merge upstream/master
-<span class="comment"># Merge commits from a fork</span>
+# Merge commits from a fork
 git branch plugin2
 git checkout plugin2
-git remote add aajanki git<span class="reserved">:</span>//github.com/aajanki/rtmpdump.git
+git remote add aajanki git://github.com/aajanki/rtmpdump.git
 git fetch aajanki
 git merge aajanki/plugin2
 git push origin plugin2
-</pre></div>
-</div>
-</div>
+</code></pre>
 
 <h3 id="rebase">Rebase</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Get first commit</span>
-git log --format=%H | tail -<span class="integer">1</span> 
+<pre lang="bash"><code># Get first commit
+git log --format=%H | tail -1 
 git rebase -i dd61ab32
 git push -f
-</pre></div>
-</div>
-</div>
+</code></pre>
 
 <ul>
   <li><a href="http://christoph.ruegg.name/blog/2010/5/5/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html">christoph.ruegg.name/blog/2010/5/5/git-howto-revert-a-commit-already-pushed-to-a-remote-reposit.html</a></li>
@@ -153,12 +129,9 @@ git push -f
 
 <h3 id="reset">Reset</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Undo a commit</span>
+<pre lang="bash"><code># Undo a commit
 git reset HEAD^
-</pre></div>
-</div>
-</div>
+</code></pre>
 
 <ul>
   <li><a href="http://schacon.github.com/git/git-rev-parse">schacon.github.com/git/git-rev-parse</a></li>

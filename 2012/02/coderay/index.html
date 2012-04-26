@@ -18,21 +18,18 @@
 	
 	<h2>Coderay</h2>
 	
-	<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Ruby193/lib/ruby/gems/1.9.1/gems/coderay-1.0.5/lib/coderay/scanners/bash.rb</span>
-<span class="instance-variable">numtest</span>=<span class="integer">123456</span>
-<span class="reserved">for</span> i <span class="reserved">in</span> /c/home/GitHub/*/
-<span class="reserved">do</span>
-    clear
-    <span class="function">cd</span> <span class="instance-variable">$i</span>
-    git status
-    <span class="function">echo</span>
-    <span class="function">echo</span> <span class="instance-variable">$i</span>
-    <span class="function">read</span>
-<span class="reserved">done</span>
-</pre></div>
-</div>
-</div>
+	<pre lang="bash"><code># Ruby193/lib/ruby/gems/1.9.1/gems/coderay-1.0.5/lib/coderay/scanners/bash.rb
+numtest=123456
+for i in /c/home/GitHub/*/
+do
+	clear
+	cd $i
+	git status
+	echo
+	echo $i
+	read
+done
+</code></pre>
 
 <h3 id="configyml">_config.yml</h3>
 <pre><code>markdown: kramdown

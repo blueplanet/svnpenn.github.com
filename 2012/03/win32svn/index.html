@@ -20,30 +20,24 @@
 	
 	<h3 id="build">Build</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Install dependencies</span>
+<pre lang="bash"><code># Install dependencies
 mingw-get install msys-unzip
 mingw-get install msys-wget
-<span class="comment"># Install SVN</span>
-wget prdownloads.sf.net/win32svn/svn-win32-<span class="float">1.7.4.</span>zip
+# Install SVN
+wget prdownloads.sf.net/win32svn/svn-win32-1.7.4.zip
 unzip svn*
-<span class="function">cd</span> svn*
+cd svn*
 mkdir /c/svn
 cp -r * /c/svn
-</pre></div>
-</div>
-</div>
+</code></pre>
 
 <h3 id="use">Use</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Checkout old revision</span>
-svn co -r <span class="integer">569</span> svn<span class="reserved">:</span>//svn.mplayerhq.hu/rtmpdump/trunk rtmpdump
-<span class="comment"># Compare two revisions</span>
-svn diff -r <span class="integer">568</span><span class="reserved">:</span><span class="integer">569</span> .
-</pre></div>
-</div>
-</div>
+<pre lang="bash"><code># Checkout old revision
+svn co -r 569 svn://svn.mplayerhq.hu/rtmpdump/trunk rtmpdump
+# Compare two revisions
+svn diff -r 568:569 .
+</code></pre>
 
 <h3 id="links">Links</h3>
 <ul>

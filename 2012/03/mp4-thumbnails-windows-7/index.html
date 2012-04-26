@@ -30,16 +30,13 @@
 
 <h3 id="use">Use</h3>
 
-<div><div class="CodeRay">
-  <div class="code"><pre><span class="comment"># Extract frame</span>
-ffmpeg -ss <span class="integer">1000</span> -i video.mp4 -vframes <span class="integer">1</span> frame.png
-<span class="comment"># Set thumbnail</span>
+<pre lang="bash"><code># Extract frame
+ffmpeg -ss 1000 -i video.mp4 -vframes 1 frame.png
+# Set thumbnail
 atomicparsley video.mp4 --artwork frame.png --overWrite
-<span class="comment"># Remove thumbnail</span>
+# Remove thumbnail
 atomicparsley video.mp4 --artwork REMOVE_ALL --overWrite
-</pre></div>
-</div>
-</div>
+</code></pre>
 
 <p>Before
 <img src="/images/2012/mp4-thumbnails-windows-7-1.png" alt="width1" /></p>
