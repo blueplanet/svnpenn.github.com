@@ -19,7 +19,7 @@ tags:
 				* `bold; fore:#00007F`
 		* Shell Script
 			* Associated filename extensions
-				* `sh; profile`
+				* `sh; bash_profile`
 			* Here-doc (Delimeter)
 				* `fore:#008080`
 
