@@ -18,12 +18,15 @@
 	
 	<h2>Firefox File Associations</h2>
 	
-	<pre lang="bash"><code>#!/bin/sh
-reg delete 'HKLM\SOFTWARE\Classes\FirefoxHTML\ShellEx\IconHandler'
-icon="$PROGRAMW6432\Pale Moon\palemoon.exe,1"
-reg add 'HKCR\FirefoxHTML\DefaultIcon' -d "$icon"
-reg add 'HKCR\Applications\palemoon.exe\DefaultIcon' -d "$icon"
-</code></pre>
+	<div><div class="CodeRay">
+  <div class="code"><pre><span class="directive">#!/bin/sh</span>
+reg delete <span class="string">'HKLM\SOFTWARE\Classes\FirefoxHTML\ShellEx\IconHandler'</span>
+<span class="instance-variable">icon</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$PROGRAMW6432</span><span class="content">\P</span><span class="content">ale Moon</span><span class="content">\p</span><span class="content">alemoon.exe,1</span><span class="delimiter">&quot;</span></span>
+reg add <span class="string">'HKCR\FirefoxHTML\DefaultIcon'</span> -d <span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$icon</span><span class="delimiter">&quot;</span></span>
+reg add <span class="string">'HKCR\Applications\palemoon.exe\DefaultIcon'</span> -d <span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$icon</span><span class="delimiter">&quot;</span></span>
+</pre></div>
+</div>
+</div>
 
 <p>Reload explorer</p>
 

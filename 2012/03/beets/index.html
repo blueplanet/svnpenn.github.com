@@ -20,11 +20,14 @@
 	
 	<h3 id="install-python">Install Python</h3>
 
-<pre lang="bash"><code>cd /c/home/Steven/Downloads
-# setuptools does not work with Python 3.2
-wget -nc python.org/ftp/python/2.7.2/python-2.7.2.amd64.msi
-msiexec -qn -i python-2.7.2.amd64.msi ADDLOCAL="DefaultFeature"
-</code></pre>
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="function">cd</span> /c/home/Steven/Downloads
+<span class="comment"># setuptools does not work with Python 3.2</span>
+wget -nc python.org/ftp/python/<span class="float">2.7.2</span>/python-<span class="float">2.7.2.</span>amd64.msi
+msiexec -qn -i python-<span class="float">2.7.2.</span>amd64.msi <span class="instance-variable">ADDLOCAL</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">DefaultFeature</span><span class="delimiter">&quot;</span></span>
+</pre></div>
+</div>
+</div>
 
 <h3 id="install-setuptools">Install setuptools</h3>
 <pre><code>wget peak.telecommunity.com/dist/ez_setup.py
@@ -38,9 +41,12 @@ pip install beets
 
 <h3 id="use">Use</h3>
 
-<pre lang="bash"><code>cd '/c/home/Steven/Music/m/Nightmares on Wax'
-beet import 'Carboot Soul'
-</code></pre>
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="function">cd</span> <span class="string">'/c/home/Steven/Music/m/Nightmares on Wax'</span>
+beet import <span class="string">'Carboot Soul'</span>
+</pre></div>
+</div>
+</div>
 
 
 </div>

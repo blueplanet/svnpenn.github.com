@@ -20,21 +20,24 @@
 	
 	<p><img src="/images/2012/git.jpg" alt="width1" /></p>
 
-<pre lang="bash"><code># Local rename
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment"># Local rename</span>
 git branch -m master master-old
-# Remote rename
+<span class="comment"># Remote rename</span>
 git push origin master-old
-git push origin :master
-# Local new master
+git push origin <span class="reserved">:</span>master
+<span class="comment"># Local new master</span>
 git checkout --orphan master
 git rm -rf .
-&lt;do work&gt;
+&lt;<span class="reserved">do</span> work&gt;
 git add -A
-git commit -m 'Initial commit'
-# Remote new master
+git commit -m <span class="string">'Initial commit'</span>
+<span class="comment"># Remote new master</span>
 git push origin master
-git push origin :master-old
-</code></pre>
+git push origin <span class="reserved">:</span>master-old
+</pre></div>
+</div>
+</div>
 
 <ul>
   <li><a href="http://stackoverflow.com/questions/1384325">In git, is there a simple way of introducing an unrelated branch to a repository?</a></li>

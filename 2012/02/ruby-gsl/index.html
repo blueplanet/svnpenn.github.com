@@ -20,15 +20,18 @@
 	
 	<h3 id="install-gsl-libraries">Install GSL libraries</h3>
 
-<pre lang="bash"><code>wget 'ftp.gnu.org/gnu/gsl/gsl-1.15.tar.gz'
+<div><div class="CodeRay">
+  <div class="code"><pre>wget <span class="string">'ftp.gnu.org/gnu/gsl/gsl-1.15.tar.gz'</span>
 tar xf gsl*
-cd gsl*
+<span class="function">cd</span> gsl*
 ./configure
-# Warning, make takes about 7 min.
+<span class="comment"># Warning, make takes about 7 min.</span>
 make
 make install
-cd -
-</code></pre>
+<span class="function">cd</span> -
+</pre></div>
+</div>
+</div>
 
 <ul>
   <li><a href="http://github.com/mojombo/jekyll/issues/376">github.com/mojombo/jekyll/issues/376</a></li>
@@ -37,16 +40,19 @@ cd -
 
 <h3 id="install-rubygsl">Install Ruby/GSL</h3>
 
-<pre lang="bash"><code># "gem install gsl" does not work. If you try it you are going to need to
-# delete from "Ruby193/lib/ruby/gems/1.9.1/gems" before you can continue.
-# rb-gsl.rubyforge.org version has to be patched to support GSL 1.15.
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment"># &quot;gem install gsl&quot; does not work. If you try it you are going to need to</span>
+<span class="comment"># delete from &quot;Ruby193/lib/ruby/gems/1.9.1/gems&quot; before you can continue.</span>
+<span class="comment"># rb-gsl.rubyforge.org version has to be patched to support GSL 1.15.</span>
 wget --content-disposition github.com/romanbsd/rb-gsl/tarball/master
 tar xf romanbsd-rb-gsl*
-cd romanbsd-rb-gsl*
+<span class="function">cd</span> romanbsd-rb-gsl*
 ruby setup.rb config
 ruby setup.rb setup
 ruby setup.rb install
-</code></pre>
+</pre></div>
+</div>
+</div>
 
 <ul>
   <li><a href="http://github.com/romanbsd/rb-gsl">github.com/romanbsd/rb-gsl</a></li>

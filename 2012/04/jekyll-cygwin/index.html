@@ -18,7 +18,7 @@
 	
 	<h2>Install Jekyll with Cygwin</h2>
 	
-	<h2 id="install-cygwin-packages">Install Cygwin packages</h2>
+	<h3 id="install-cygwin-packages">Install Cygwin packages</h3>
 <ul>
   <li>gcc4-core</li>
   <li>git</li>
@@ -27,29 +27,56 @@
   <li>wget</li>
 </ul>
 
-<h2 id="install-rubygems">Install Rubygems</h2>
-<p>wget rubyforge.org/frs/download.php/76032/rubygems-1.8.23.tgz
-tar xf rubygems*
-cd rubygems*
-ruby setup.rb install
-cd -</p>
+<h3 id="install-rubygems">Install Rubygems</h3>
 
-<h2 id="install-posix-spawn">Install posix-spawn</h2>
-<p>gem install rake-compiler
-git clone git://github.com/rtomayko/posix-spawn.git
-cd posix-spawn
+<div><div class="CodeRay">
+  <div class="code"><pre>wget rubyforge.org/frs/download.php/<span class="integer">76032</span>/rubygems-<span class="float">1.8.23.</span>tgz
+tar xf rubygems*
+<span class="function">cd</span> rubygems*
+ruby setup.rb install
+<span class="function">cd</span> -
+</pre></div>
+</div>
+</div>
+
+<h3 id="install-posix-spawn">Install posix-spawn</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>gem install rake-compiler
+git clone git<span class="reserved">:</span>//github.com/rtomayko/posix-spawn.git
+<span class="function">cd</span> posix-spawn
 rake gem
-gem install pkg/posix-spawn-0.3.6
-cd -</p>
+gem install pkg/posix-spawn-<span class="float">0.3.6</span>
+<span class="function">cd</span> -
+</pre></div>
+</div>
+</div>
 
 <ul>
   <li><a href="http://matt.scharley.me/2012/03/10/windows-cygwin-and-jekyll">matt.scharley.me/2012/03/10/windows-cygwin-and-jekyll</a></li>
   <li><a href="http://stevenharman.net/blog/archive/2008/11/12/installing-rubygems-in-cygwin.aspx">stevenharman.net/blog/archive/2008/11/12/installing-rubygems-in-cygwin.aspx</a></li>
 </ul>
 
-<h2 id="install-jekyll">Install Jekyll</h2>
-<p>PATH=/bin
-gem install jekyll</p>
+<h3 id="install-jekyll">Install Jekyll</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre><span class="predefined">PATH</span>=/bin
+gem install jekyll
+</pre></div>
+</div>
+</div>
+
+<h3 id="install-coderay">Install Coderay</h3>
+
+<div><div class="CodeRay">
+  <div class="code"><pre>gem install coderay
+<span class="comment"># Install Bash scanner</span>
+<span class="function">cd</span> /usr/lib/ruby/gems/*/gems/coderay*/lib/coderay/scanners
+wget https<span class="reserved">:</span>//raw.github.com/pejuko/coderay_bash/master/lib/coderay/scanners/bash.rb
+<span class="function">cd</span> -
+</pre></div>
+</div>
+</div>
 
 
 
