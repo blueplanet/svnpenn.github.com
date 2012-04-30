@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Make a commit from a patch
+title: Patch a Git repo
 tags:
- - Windows
+ - Git
 ---
 
 {:lang='bash'}
