@@ -37,7 +37,6 @@ tags:
 ### Install Jekyll
 
 {:lang='bash'}
-	PATH=/bin
 	gem install jekyll
 
 ### Install Coderay
