@@ -32,7 +32,7 @@ tags:
     * Links
     * Pictures
 
-4. Desktop folder location = `c:/home/steven/desktop`
+4. Desktop folder location = `C:\home\Steven\Desktop`
 
 5. Merge folders from external HD
     * Desktop
