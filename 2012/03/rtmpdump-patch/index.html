@@ -19,31 +19,7 @@
 	<h2>Patch a Git repo</h2>
 	
 	<div><div class="CodeRay">
-  <div class="code"><pre><span class="directive">#!/bin/sh</span>
-<span class="comment"># Patch my repo, but do not make a commit</span>
-<span class="instance-variable">patch_branch</span>=KSV
-<span class="instance-variable">patch_file</span>=Patch.diff
-<span class="instance-variable">url_mine</span>=git@github.com<span class="reserved">:</span>svnpenn/rtmpdump.git
-<span class="instance-variable">url_upstream</span>=git<span class="reserved">:</span>//git.ffmpeg.org/rtmpdump
-
-<span class="comment"># Get my repo</span>
-git clone <span class="instance-variable">$url_mine</span> dir_mine
-<span class="function">cd</span> dir_mine
-git checkout <span class="instance-variable">$patch_branch</span>
-<span class="comment"># Empty my repo, except &quot;.git&quot;</span>
-rm -r *
-<span class="function">cd</span> -
-
-<span class="comment"># Get upstream repo</span>
-git clone <span class="instance-variable">$url_upstream</span> dir_upstream
-<span class="function">cd</span> dir_upstream
-git apply ../<span class="instance-variable">$patch_file</span> <span class="integer">2</span>&gt;nul || git apply -p0 ../<span class="instance-variable">$patch_file</span> || <span class="reserved">{</span>
-    <span class="function">echo</span> <span class="string">'Patch failed!'</span>
-    <span class="function">exit</span>
-<span class="reserved">}</span>
-<span class="comment"># Copy patched files over</span>
-cp -r * ../dir_mine
-<span class="function">cd</span> -
+  <div class="code"><pre>Liquid error<span class="reserved">:</span> No such file or directory - /c/home/GitHub/svnpenn.github.com/_includes
 </pre></div>
 </div>
 </div>
