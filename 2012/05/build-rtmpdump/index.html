@@ -3,7 +3,7 @@
 
 <meta charset='utf-8'>
 
-<title>Build RtmpDump with PolarSSL 1.0.0</title>
+<title>Build RtmpDump</title>
 
 <link rel='stylesheet' href='/css/style.css'>
 <link rel='stylesheet' href='/css/coderay.css'>
@@ -16,19 +16,24 @@
 
 <div id='container'>
 	
-	<h2>Build RtmpDump with PolarSSL 1.0.0</h2>
+	<h2>Build RtmpDump</h2>
 	
 	<div><div class="CodeRay">
   <div class="code"><pre><span class="directive">#!/bin/sh</span>
-<span class="comment"># This install requires MSYS Base System.</span>
-<span class="comment"># I prefer this over installing MinGW Developer Toolkit.</span>
-
 <span class="comment"># Install dependencies</span>
 mingw-get install libz
 mingw-get install msys-wget
 
+<span class="comment"># Determine correct PolarSSL</span>
+git clone git<span class="reserved">:</span>//git.ffmpeg.org/rtmpdump
+<span class="function">cd</span> rtmpdump
+<span class="instance-variable">v</span>=<span class="string">'0.14.3'</span>
+grep -r ciphersuite * &amp;&amp; <span class="instance-variable">v</span>=<span class="string">'1.0.0'</span>
+grep -r havege_random * &amp;&amp; <span class="instance-variable">v</span>=<span class="string">'1.1.3'</span>
+<span class="function">cd</span> -
+
 <span class="comment"># Install PolarSSL</span>
-wget polarssl.org/code/releases/polarssl-<span class="float">1.0.0-</span>gpl.tgz
+wget polarssl.org/code/releases/polarssl-<span class="instance-variable">$v</span>-gpl.tgz
 tar xf polarssl*
 <span class="function">cd</span> polarssl*
 <span class="comment"># SYS_LDFLAGS=-lws2_32 is only needed for APPS, which we are not using.</span>
@@ -37,13 +42,12 @@ make <span class="instance-variable">DESTDIR</span>=/mingw install
 <span class="function">cd</span> -
 
 <span class="comment"># Install RtmpDump</span>
-git clone git<span class="reserved">:</span>//git.ffmpeg.org/rtmpdump
 <span class="function">cd</span> rtmpdump
 <span class="comment"># Add tag</span>
 git tag <span class="string">'v2.4'</span> <span class="string">'c28f1ba'</span>
 <span class="comment"># Build</span>
-make <span class="instance-variable">SHARED</span>= <span class="instance-variable">SYS</span>=mingw <span class="instance-variable">CRYPTO</span>=POLARSSL <span class="instance-variable">XLIBS</span>=-static \
-<span class="instance-variable">VERSION</span>=<span class="shell"><span class="delimiter">$(</span>git describe --tags<span class="delimiter">)</span></span>
+make <span class="instance-variable">SYS</span>=mingw <span class="instance-variable">CRYPTO</span>=POLARSSL <span class="instance-variable">SHARED</span>= <span class="instance-variable">XLIBS</span>=-static \
+    <span class="instance-variable">VERSION</span>=<span class="shell"><span class="delimiter">$(</span>git describe --tags<span class="delimiter">)</span></span>
 <span class="comment"># Build librtmp.dll</span>
 make <span class="instance-variable">SYS</span>=mingw <span class="instance-variable">CRYPTO</span>=POLARSSL
 </pre></div>
@@ -52,7 +56,7 @@ make <span class="instance-variable">SYS</span>=mingw <span class="instance-vari
 
 <h3 id="links">Links</h3>
 <ul>
-  <li><a href="http://github.com/svnpenn/build-scripts/blob/master/win32/rtmpdump/rtmpdump-w32-build-100.sh">github.com/svnpenn/build-scripts/blob/master/win32/rtmpdump/rtmpdump-w32-build-100.sh</a></li>
+  <li><a href="http://github.com/svnpenn/build-scripts/blob/master/win32/rtmpdump/rtmpdump-w32-mingw.sh">github.com/svnpenn/build-scripts/blob/master/win32/rtmpdump/rtmpdump-w32-mingw.sh</a></li>
   <li><a href="http://polarssl.org/trac/ticket/35">polarssl.org/trac/ticket/35</a></li>
 </ul>
 
