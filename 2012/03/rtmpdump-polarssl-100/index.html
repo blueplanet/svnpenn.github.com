@@ -40,7 +40,7 @@ make <span class="instance-variable">DESTDIR</span>=/mingw install
 git clone git<span class="reserved">:</span>//git.ffmpeg.org/rtmpdump
 <span class="function">cd</span> rtmpdump
 <span class="comment"># Add tag</span>
-git tag v2.<span class="integer">4</span> c28f1ba
+git tag <span class="string">'v2.4'</span> <span class="string">'c28f1ba'</span>
 <span class="comment"># Build</span>
 make <span class="instance-variable">SHARED</span>= <span class="instance-variable">SYS</span>=mingw <span class="instance-variable">CRYPTO</span>=POLARSSL <span class="instance-variable">XLIBS</span>=-static \
 <span class="instance-variable">VERSION</span>=<span class="shell"><span class="delimiter">$(</span>git describe --tags<span class="delimiter">)</span></span>
