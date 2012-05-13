@@ -8,10 +8,10 @@ tags:
 ![width1](/images/2012/adblock-plus.png)
 
 ## Filter subscription
-Preferences, Filters, Add filter subscription, EasyList
-
-Preferences, Filters, Add filter subscription, Add a different subscription,
-Subscription title, Steven
+* Preferences, Filters, Add filter subscription, EasyList
+* Preferences, Filters, Add filter subscription, Add a different subscription
+	* Subscription title `Steven`
+	* Filter list location `https://raw.github.com/svnpenn/dotfiles/master/abp/steven.txt`
 
 ## Notes
 Fanboy’s List is not viable because it messes with Gmail.
