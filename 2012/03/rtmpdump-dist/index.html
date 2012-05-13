@@ -19,7 +19,72 @@
 	<h2>Create RtmpDump Distribution</h2>
 	
 	<div><div class="CodeRay">
-  <div class="code"><pre>Liquid error<span class="reserved">:</span> No such file or directory - /c/home/GitHub/svnpenn.github.com/_includes
+  <div class="code"><pre><span class="directive">#!/bin/sh</span>
+<span class="comment"># Create distribution!</span>
+mingw-get install msys-coreutils
+
+<span class="comment"># Install RtmpDump</span>
+<span class="function">cd</span> rtmpdump
+<span class="instance-variable">rtmpdump_version</span>=<span class="shell"><span class="delimiter">$(</span>git describe --tags<span class="delimiter">)</span></span>
+<span class="comment"># stackoverflow.com/questions/1253828</span>
+<span class="instance-variable">rtmpdump_timestamp</span>=<span class="shell"><span class="delimiter">$(</span>date -d <span class="string"><span class="delimiter">&quot;</span><span class="shell"><span class="delimiter">$(</span><span class="content">stat -c %z rtmpdump.exe</span><span class="delimiter">)</span></span><span class="delimiter">&quot;</span></span><span class="delimiter">)</span></span>
+<span class="instance-variable">distdir</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$OLDPWD</span><span class="content">/rtmpdump-</span><span class="instance-variable">$rtmpdump_version</span><span class="content">-svnpenn</span><span class="delimiter">&quot;</span></span>
+mkdir <span class="instance-variable">$distdir</span>
+
+cp rtmpdump.exe <span class="instance-variable">$distdir</span>
+cp rtmpgw.exe <span class="instance-variable">$distdir</span>
+cp rtmpsrv.exe <span class="instance-variable">$distdir</span>
+cp rtmpsuck.exe <span class="instance-variable">$distdir</span>
+
+<span class="function">cd</span> librtmp
+cp librtmp.dll <span class="instance-variable">$distdir</span>
+
+<span class="comment"># Compress files</span>
+<span class="function">cd</span> <span class="instance-variable">$distdir</span>
+<span class="comment"># strip -R .tls -o test.exe rtmpdump.exe</span>
+strip *
+<span class="comment"># mpress -b rtmpdump.exe</span>
+upx -<span class="integer">9</span> *
+
+<span class="comment"># CREATE README</span>
+<span class="instance-variable">gcc_version</span>=<span class="shell"><span class="delimiter">$(</span>gcc -dumpversion<span class="delimiter">)</span></span>
+
+<span class="instance-variable">polarssl_version</span>=<span class="shell"><span class="delimiter">$(</span>cat <span class="string"><span class="delimiter">&lt;&lt;EOF</span><span class="content"> | gcc -</span>E -xc - | tail -1 | tr -d \&quot;
+<span class="content">#include &lt;polarssl/version.h&gt;
+P</span>OLARSSL_VERSION_STRING
+<span class="delimiter">EOF</span></span><span class="delimiter">)</span></span>
+
+<span class="instance-variable">zlib_version</span>=<span class="shell"><span class="delimiter">$(</span>cat <span class="string"><span class="delimiter">&lt;&lt;EOF</span><span class="content"> | gcc -</span>E -xc - | tail -1 | tr -d \&quot;
+<span class="content">#include &lt;zlib.h&gt;
+ZLIB_V</span>ERSION
+<span class="delimiter">EOF</span></span><span class="delimiter">)</span></span>
+
+cat &gt; README.txt <span class="string"><span class="delimiter">&lt;&lt;EOF</span>
+<span class="content">This is a RtmpDump Win32 static build by Steven Penny.
+
+Steven's Home Page: http://svnpenn.github.com
+
+Built on </span><span class="instance-variable">$rtmpdump_timestamp</span>
+
+<span class="content">RtmpDump version </span><span class="instance-variable">$rtmpdump_version</span>
+
+<span class="content">The source code for this RtmpDump build can be found at
+    http://rtmpdump.mplayerhq.hu
+
+This version of RtmpDump was built on
+    Window 7 Ultimate Service Pack 1
+    http://windows.microsoft.com/en-us/windows7/products/home
+
+The toolchain used to compile this RtmpDump was
+    MinGW: http://sourceforge.net/projects/mingw
+
+The GCC version used to compile this RtmpDump was
+    GCC </span><span class="instance-variable">$gcc_version</span><span class="content">: http://gcc.gnu.org
+
+The external libraries compiled into this RtmpDump are
+    Zlib </span><span class="instance-variable">$zlib_version</span><span class="content"> http://zlib.net
+    PolarSSL </span><span class="instance-variable">$polarssl_version</span><span class="content"> http://polarssl.org
+</span><span class="delimiter">EOF</span></span>
 </pre></div>
 </div>
 </div>

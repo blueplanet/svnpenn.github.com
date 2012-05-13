@@ -19,7 +19,26 @@
 	<h2>Make a commit with correct author and date</h2>
 	
 	<div><div class="CodeRay">
-  <div class="code"><pre>Liquid error<span class="reserved">:</span> No such file or directory - /c/home/GitHub/svnpenn.github.com/_includes
+  <div class="code"><pre><span class="directive">#!/bin/sh</span>
+<span class="comment"># Make a commit with correct author and date</span>
+
+<span class="function">echo</span> <span class="string">'Enter commit author, e.g. KSV &lt;faltuvisitor@yahoo.co.in&gt;'</span>
+<span class="function">read</span> <span class="instance-variable">author</span>
+
+<span class="function">echo</span>
+<span class="function">echo</span> <span class="string">'Enter path to file with timestamp, or'</span>
+<span class="function">echo</span> <span class="string">'Enter date, e.g. 2012-04-26 14:56:20 +0000'</span>
+<span class="function">read</span> <span class="instance-variable">-r</span> author_date
+<span class="function">test</span> -e <span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$author_date</span><span class="delimiter">&quot;</span></span> &amp;&amp; <span class="reserved">{</span>
+    <span class="instance-variable">author_date</span>=<span class="shell"><span class="delimiter">$(</span>date -Rud <span class="string"><span class="delimiter">&quot;</span><span class="shell"><span class="delimiter">$(</span><span class="content">stat -c %y </span><span class="instance-variable">$author_date</span><span class="delimiter">)</span></span><span class="delimiter">&quot;</span></span><span class="delimiter">)</span></span>
+    <span class="function">echo</span> <span class="instance-variable">$author_date</span>
+<span class="reserved">}</span>
+
+<span class="comment"># Ignore incorrect file modes</span>
+git config core.filemode false
+<span class="comment"># Commit, assume we are in repo dir</span>
+git add -A
+git commit --author <span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$author</span><span class="delimiter">&quot;</span></span> --date <span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$author_date</span><span class="delimiter">&quot;</span></span>
 </pre></div>
 </div>
 </div>
