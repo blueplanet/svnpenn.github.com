@@ -5,7 +5,7 @@ tags:
  - Web
 ---
 
-![width1](http://svnpenn.github.com/abp/adblock-plus.png)
+![width1](/images/2012/adblock-plus.png)
 
 ## Filter subscription
 Preferences, Filters, Add filter subscription, EasyList
