@@ -9,7 +9,7 @@
 <body>
 
 <h1>
-<a href='http://github.com/svnpenn/svnpenn.github.com'>Steven&rsquo;s Blog</a>
+<a href='http://github.com/svnpenn/svnpenn.github.com'>Steven’s Blog</a>
 </h1>
 
 <!--flyerhzm.github.com/_layouts/default.html-->
