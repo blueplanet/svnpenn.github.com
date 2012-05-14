@@ -11,7 +11,7 @@
 <body>
 
 <h1>
-<a href='/'>Steven&rsquo;s Blog</a>
+<a href='/'>Steven’s Blog</a>
 </h1>
 
 <div id='container'>
