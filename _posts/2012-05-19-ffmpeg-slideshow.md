@@ -17,12 +17,6 @@ tags:
 	ffmpeg -t 272 -loop 1 -i 360-01.jpg -c copy 01.mjpg
 
 ### Join video files
-Vimeo
-
-	cat *.mjpg | ffmpeg -f mjpeg -i - -i in.mp3 -c:v libx264 -c:a copy -shortest vimeo.flv
-
-Youtube
-
 	cat *.mjpg | ffmpeg -f mjpeg -i - -i in.mp3 -c:v libx264 -vprofile main -c:a libvo_aacenc -ac 2 -shortest youtube.flv
 
 ### Notes
