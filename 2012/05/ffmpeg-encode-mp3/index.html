@@ -20,7 +20,7 @@
 	
 	<div><div class="CodeRay">
   <div class="code"><pre><span class="comment"># AAC source</span>
-ffmpeg -i <span class="reserved">in</span>.flv -q <span class="integer">1</span> out.mp3
+ffmpeg -i <span class="reserved">in</span>.flv -q <span class="integer">1</span> -map a out.mp3
 
 <span class="comment"># MP3 source</span>
 ffmpeg -i <span class="reserved">in</span>.flv -c copy out.mp3
