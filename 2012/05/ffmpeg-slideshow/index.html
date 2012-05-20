@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset='utf-8'>
+
+<title>FFmpeg, Slideshow</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven’s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>FFmpeg, Slideshow</h2>
+	
+	<h3 id="resize-images">Resize images</h3>
+<ol>
+  <li>Take image with highest aspect ratio</li>
+  <li>width with padding = 360*(aspect ratio)</li>
+</ol>
+
+<!---->
+
+<pre><code>ffmpeg -i 01.jpg -vf scale=-1:360,pad=640:ih:(ow-iw)/2 -qmax 1 -sws_flags lanczos 360-01.jpg
+</code></pre>
+
+<h3 id="video-from-image">Video from image</h3>
+<pre><code>ffmpeg -t 272 -loop 1 -i 360-01.jpg -c copy 01.mjpg
+</code></pre>
+
+<h3 id="join-video-files">Join video files</h3>
+<p>Vimeo</p>
+
+<pre><code>cat *.mjpg | ffmpeg -f mjpeg -i - -i in.mp3 -c:v libx264 -c:a copy -shortest vimeo.flv
+</code></pre>
+
+<p>Youtube</p>
+
+<pre><code>cat *.mjpg | ffmpeg -f mjpeg -i - -i in.mp3 -c:v libx264 -vprofile main -c:a libvo_aacenc -ac 2 -shortest youtube.flv
+</code></pre>
+
+<h3 id="notes">Notes</h3>
+<ul>
+  <li>Using mjpg is better than mpg because you can mux without encoding</li>
+  <li>If performance is jerky you can set <code>-threads 6</code></li>
+</ul>
+
+<h3 id="links">Links</h3>
+<ul>
+  <li><a href="http://ffmpeg.org/pipermail/ffmpeg-devel/2011-July/113463.html">http://ffmpeg.org/pipermail/ffmpeg-devel/2011-July/113463.html</a></li>
+  <li><a href="http://git.videolan.org/?p=ffmpeg.git;h=9c14d;f=ffpresets/libx264-hq.ffpreset">http://git.videolan.org/?p=ffmpeg.git;h=9c14d;f=ffpresets/libx264-hq.ffpreset</a></li>
+  <li><a href="http://git.videolan.org/?p=x264.git;a=blob;f=x264.c">http://git.videolan.org/?p=x264.git;a=blob;f=x264.c</a></li>
+  <li><a href="http://google.com/support/youtube/bin/answer.py?answer=132460">http://google.com/support/youtube/bin/answer.py?answer=132460</a></li>
+  <li><a href="http://google.com/support/youtube/bin/answer.py?answer=55744">http://google.com/support/youtube/bin/answer.py?answer=55744</a></li>
+  <li><a href="http://wikipedia.org/wiki/List_of_codecs#Lossless_compression">http://wikipedia.org/wiki/List_of_codecs#Lossless_compression</a></li>
+  <li><a href="http://wikipedia.org/wiki/YouTube#Quality_and_codecs">http://wikipedia.org/wiki/YouTube#Quality_and_codecs</a></li>
+</ul>
+
+
+</div>
+</body>
+</html>
