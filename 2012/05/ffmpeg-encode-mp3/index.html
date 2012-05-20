@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset='utf-8'>
+
+<title>FFmpeg, encode mp3</title>
+
+<link rel='stylesheet' href='/css/style.css'>
+<link rel='stylesheet' href='/css/coderay.css'>
+
+<body>
+
+<h1>
+<a href='/'>Steven’s Blog</a>
+</h1>
+
+<div id='container'>
+	
+	<h2>FFmpeg, encode mp3</h2>
+	
+	<div><div class="CodeRay">
+  <div class="code"><pre><span class="comment"># AAC source</span>
+ffmpeg -i <span class="reserved">in</span>.flv -q <span class="integer">1</span> out.mp3
+
+<span class="comment"># MP3 source</span>
+ffmpeg -i <span class="reserved">in</span>.flv -c copy out.mp3
+
+<span class="comment"># WAV source</span>
+ffmpeg -i <span class="reserved">in</span>.wav -b<span class="reserved">:</span>a <span class="integer">320</span>k out.mp3
+</pre></div>
+</div>
+</div>
+
+
+</div>
+</body>
+</html>
