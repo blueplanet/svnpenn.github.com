@@ -34,13 +34,6 @@
 </code></pre>
 
 <h3 id="join-video-files">Join video files</h3>
-<p>Vimeo</p>
-
-<pre><code>cat *.mjpg | ffmpeg -f mjpeg -i - -i in.mp3 -c:v libx264 -c:a copy -shortest vimeo.flv
-</code></pre>
-
-<p>Youtube</p>
-
 <pre><code>cat *.mjpg | ffmpeg -f mjpeg -i - -i in.mp3 -c:v libx264 -vprofile main -c:a libvo_aacenc -ac 2 -shortest youtube.flv
 </code></pre>
 
