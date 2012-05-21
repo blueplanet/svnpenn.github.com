@@ -15,7 +15,7 @@ text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
 body {
 /* Helvetica is not free superuser.com/q/94992 */
 background-color: #C0A154;
-background-image: url(/images/background.png);
+background-image: url(/img/background.png);
 font-family: Arial;
 }
 code, pre {
@@ -59,7 +59,7 @@ h1 a { color: white; }
 a:hover { text-decoration: underline; }
 a, h1 a:hover { text-decoration: none; }
 #container {
-background: url(/images/background.png);
+background: url(/img/background.png);
 margin: auto;
 padding: 1em;
 width: 50em;
