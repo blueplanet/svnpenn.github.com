@@ -7,11 +7,9 @@ tags:
 
 {:lang='bash'}
 ~~~
-{% include rtmpdump-w32-mingw.sh %}
+{% include rtmpdump-2.4-cygwin.sh %}
 ~~~
 
 ### Links
-* [github.com/svnpenn/build-scripts/blob/master/win32/rtmpdump/rtmpdump-w32-mingw.sh][g]
-* [polarssl.org/trac/ticket/35](http://polarssl.org/trac/ticket/35)
-
-[g]:http://github.com/svnpenn/build-scripts/blob/master/win32/rtmpdump/rtmpdump-w32-mingw.sh
+* <http://github.com/svnpenn/build-scripts/blob/master/win32/rtmpdump/rtmpdump-2.4-cygwin.sh>
+* <http://polarssl.org/trac/ticket/35>
