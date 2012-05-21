@@ -5,7 +5,7 @@ tags:
  - Etc
 ---
 
-![width1](/images/2012/git.jpg)
+![width1](/img/2012/git.jpg)
 
 I had this dream I lived on the 7th floor apartment. Somehow there were no
 floors 1-6.

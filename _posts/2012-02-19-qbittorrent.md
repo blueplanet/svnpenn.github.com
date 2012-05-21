@@ -25,6 +25,6 @@ Downloads, Save files to location, `C:\tmp\seeding`
 * [qbittorrent.org](http://qbittorrent.org)
 * [sourceforge.net/projects/qbittorrent][s]
 
-![width2](/images/2011/qbittorrent.png)
+![width2](/img/2011/qbittorrent.png)
 
 [s]:http://sourceforge.net/projects/qbittorrent

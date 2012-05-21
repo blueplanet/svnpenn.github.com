@@ -5,7 +5,7 @@ tags:
  - Git
 ---
 
-![width1](/images/2012/git.jpg)
+![width1](/img/2012/git.jpg)
 
 {:lang='bash'}
 	# Local rename

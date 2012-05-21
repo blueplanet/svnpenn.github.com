@@ -5,7 +5,7 @@ tags:
  - Movies
 ---
 
-![width1](/images/2012/1995-goldeneye.jpg)
+![width1](/img/2012/1995-goldeneye.jpg)
 
 James Bond teams up with the lone survivor of a destroyed Russian research
 center to stop the hijacking of a nuclear space weapon by a fellow agent

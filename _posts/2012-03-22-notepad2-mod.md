@@ -5,7 +5,7 @@ tags:
  - Windows
 ---
 
-![width1](/images/2012/sparrow.jpg)
+![width1](/img/2012/sparrow.jpg)
 
 ## Configure
 * View

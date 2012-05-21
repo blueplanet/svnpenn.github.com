@@ -22,10 +22,10 @@ tags:
 	atomicparsley video.mp4 --artwork REMOVE_ALL --overWrite
 
 Before
-![width1](/images/2012/mp4-thumbnails-windows-7-1.png)
+![width1](/img/2012/mp4-thumbnails-windows-7-1.png)
 
 After
-![width1](/images/2012/mp4-thumbnails-windows-7-2.png)
+![width1](/img/2012/mp4-thumbnails-windows-7-2.png)
 
 ### Links
 * [kerstetter.net/index.php/projects/software/metax][k]

@@ -5,7 +5,7 @@ tags:
  - Web
 ---
 
-![width1](/images/2012/adblock-plus.png)
+![width1](/img/2012/adblock-plus.png)
 
 ## Filter subscription
 * Preferences, Filters, Add filter subscription, EasyList

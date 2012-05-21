@@ -39,7 +39,7 @@ GRUB must be installed whether you use it or not.
 * [blog.sudobits.com/2011/07/30/how-to-uninstall-ubuntu][b]
 * [blogs.technet.com/b/port25/archive/2006/10/13/http-port25-technet-com-archive-2006-10-12-windows-and-linux-integration-3a00-a-conversation-with-the-author-aspx.aspx][o]
 
-![width1](http://svnpenn.github.com/images/2011/backtrack-linux.png)
+![width1](/img/2011/backtrack-linux.png)
 
 [b]:http://blog.sudobits.com/2011/07/30/how-to-uninstall-ubuntu
 [o]:http://blogs.technet.com/b/port25/archive/2006/10/13/http-port25-technet-com-archive-2006-10-12-windows-and-linux-integration-3a00-a-conversation-with-the-author-aspx.aspx

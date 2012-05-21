@@ -5,7 +5,7 @@ tags:
  - Movies
 ---
 
-![width1](/images/2012/1996-mission-impossible.jpg)
+![width1](/img/2012/1996-mission-impossible.jpg)
 
 An American agent, under false suspicion of disloyalty, must discover and expose
 the real spy without the help of his organization. 
