@@ -140,8 +140,7 @@ git push origin plugin2
 
 <div><div class="CodeRay">
   <div class="code"><pre><span class="comment"># Get first commit</span>
-git log --format=%H | tail -<span class="integer">1</span> 
-git rebase -i dd61ab32
+git log --format=%H | tail -<span class="integer">1</span> | xargs git rebase -i
 git push -f
 </pre></div>
 </div>
