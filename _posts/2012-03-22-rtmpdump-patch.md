@@ -7,7 +7,7 @@ tags:
 
 {:lang='bash'}
 ~~~
-{% include rtmpdump-patch.sh %}
+{% render_partial ../dotfiles/bin/rtmpdump-patch.sh %}
 ~~~
 
 ### Links

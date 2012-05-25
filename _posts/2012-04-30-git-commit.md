@@ -7,7 +7,7 @@ tags:
 
 {:lang='bash'}
 ~~~
-{% include git-commit.sh %}
+{% render_partial ../dotfiles/bin/git-commit.sh %}
 ~~~
 
 ### Links

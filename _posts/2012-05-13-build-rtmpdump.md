@@ -7,7 +7,7 @@ tags:
 
 {:lang='bash'}
 ~~~
-{% include rtmpdump-2.4-cygwin.sh %}
+{% render_partial ../build-scripts/win32/rtmpdump/rtmpdump-2.4-cygwin.sh %}
 ~~~
 
 ### Links
