@@ -18,9 +18,19 @@
 	
 	<h2>How to use rtmp-host.sh</h2>
 	
-	<p><img src="/img/2012/doe.jpg" alt="width1" /></p>
+	<p>I never really liked RtmpExplorer. It only works with Internet Explorer, it is
+closed source (sort of) and it requires the .NET Framework. rtmp-host.sh is
+something I came up with. Basically it dumps the memory of Flash Player, which
+contains all the RTMP parameters. It should find all the RTMP URLs, e.g. 
+<code>rtmpte://cp97384.edgefcs.net</code>. Then you enter the host, e.g.
+<code>cp97384.edgefcs.net</code>. After that it will automatically edit your hosts file,
+invoke RtmpSrv, then RtmpDump. I have tested it on Cygwin but it should work on
+MinGW with a little modification.</p>
 
-<ol>
+<p><img src="/img/2012/doe.jpg" alt="width1" /></p>
+
+<h2 id="setup">Setup</h2>
+<ul>
   <li>
     <p>Install <a href="http://mozilla.org"><strong>Firefox</strong></a></p>
   </li>
@@ -42,10 +52,10 @@
   <li>
     <p>Run</p>
 
-    <pre><code> ./rtmp-host.sh
+    <pre><code>  ./rtmp-host.sh
 </code></pre>
   </li>
-</ol>
+</ul>
 
 
 </div>
