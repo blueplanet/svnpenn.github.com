@@ -20,7 +20,7 @@
 	
 	<div><div class="CodeRay">
   <div class="code"><pre><span class="directive">#!/bin/sh</span>
-<span class="instance-variable">HOST</span>=i686-w64-mingw32
+<span class="instance-variable">host</span>=i686-w64-mingw32
 
 <span class="comment"># Install Cygwin packages</span>
 ./setup -nqs ftp<span class="reserved">:</span>//lug.mtu.edu/cygwin -P git,make,mingw64-i686-gcc-core,wget
@@ -30,8 +30,8 @@ wget zlib.net/zlib-<span class="float">1.2.7.</span>tar.bz2
 tar xf zlib*
 <span class="function">cd</span> zlib*
 make install -f win32/Makefile.gcc <span class="instance-variable">BINARY_PATH</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">/bin</span><span class="delimiter">&quot;</span></span> \
-    <span class="instance-variable">DESTDIR</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">/usr/</span><span class="instance-variable">$HOST</span><span class="content">/sys-root/mingw</span><span class="delimiter">&quot;</span></span> <span class="instance-variable">INCLUDE_PATH</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">/include</span><span class="delimiter">&quot;</span></span> \
-    <span class="instance-variable">LIBRARY_PATH</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">/lib</span><span class="delimiter">&quot;</span></span> <span class="instance-variable">PREFIX</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$HOST</span><span class="content">-</span><span class="delimiter">&quot;</span></span>
+    <span class="instance-variable">DESTDIR</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">/usr/</span><span class="instance-variable">$host</span><span class="content">/sys-root/mingw</span><span class="delimiter">&quot;</span></span> <span class="instance-variable">INCLUDE_PATH</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">/include</span><span class="delimiter">&quot;</span></span> \
+    <span class="instance-variable">LIBRARY_PATH</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">/lib</span><span class="delimiter">&quot;</span></span> <span class="instance-variable">PREFIX</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$host</span><span class="content">-</span><span class="delimiter">&quot;</span></span>
 
 <span class="comment"># Determine correct PolarSSL</span>
 git clone git<span class="reserved">:</span>//git.ffmpeg.org/rtmpdump
@@ -45,19 +45,19 @@ grep -r havege_random * &amp;&amp; <span class="instance-variable">v</span>=<spa
 wget polarssl.org/code/releases/polarssl-<span class="instance-variable">$v</span>-gpl.tgz
 tar xf polarssl*
 <span class="function">cd</span> polarssl*
-make <span class="instance-variable">APPS</span>= <span class="instance-variable">AR</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$HOST</span><span class="content">-ar</span><span class="delimiter">&quot;</span></span> <span class="instance-variable">CC</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$HOST</span><span class="content">-gcc</span><span class="delimiter">&quot;</span></span>
-make install <span class="instance-variable">DESTDIR</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">/usr/</span><span class="instance-variable">$HOST</span><span class="content">/sys-root/mingw</span><span class="delimiter">&quot;</span></span>
+make <span class="instance-variable">APPS</span>= <span class="instance-variable">AR</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$host</span><span class="content">-ar</span><span class="delimiter">&quot;</span></span> <span class="instance-variable">CC</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$host</span><span class="content">-gcc</span><span class="delimiter">&quot;</span></span>
+make install <span class="instance-variable">DESTDIR</span>=<span class="string"><span class="delimiter">&quot;</span><span class="content">/usr/</span><span class="instance-variable">$host</span><span class="content">/sys-root/mingw</span><span class="delimiter">&quot;</span></span>
 <span class="function">cd</span> -
 
 <span class="comment"># Install RtmpDump</span>
 <span class="function">cd</span> rtmpdump
 git tag <span class="string">'v2.4'</span> <span class="string">'c28f1ba'</span>
 <span class="comment"># Build</span>
-make <span class="instance-variable">CROSS_COMPILE</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$HOST</span><span class="content">-</span><span class="delimiter">&quot;</span></span> <span class="instance-variable">CRYPTO</span>=POLARSSL <span class="instance-variable">SHARED</span>= <span class="instance-variable">SYS</span>=mingw \
+make <span class="instance-variable">CROSS_COMPILE</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$host</span><span class="content">-</span><span class="delimiter">&quot;</span></span> <span class="instance-variable">CRYPTO</span>=POLARSSL <span class="instance-variable">SHARED</span>= <span class="instance-variable">SYS</span>=mingw \
     <span class="instance-variable">VERSION</span>=<span class="shell"><span class="delimiter">$(</span>git describe --tags<span class="delimiter">)</span></span> <span class="instance-variable">XLDFLAGS</span>=-static
 
 <span class="comment"># Build librtmp.dll</span>
-make <span class="instance-variable">CROSS_COMPILE</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$HOST</span><span class="content">-</span><span class="delimiter">&quot;</span></span> <span class="instance-variable">CRYPTO</span>=POLARSSL <span class="instance-variable">SYS</span>=mingw
+make <span class="instance-variable">CROSS_COMPILE</span>=<span class="string"><span class="delimiter">&quot;</span><span class="instance-variable">$host</span><span class="content">-</span><span class="delimiter">&quot;</span></span> <span class="instance-variable">CRYPTO</span>=POLARSSL <span class="instance-variable">SYS</span>=mingw
 </pre></div>
 </div>
 </div>
