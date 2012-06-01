@@ -21,6 +21,7 @@
 	<div><div class="CodeRay">
   <div class="code"><pre><span class="directive">#!/bin/sh</span>
 <span class="comment"># Create distribution!</span>
+<span class="instance-variable">host</span>=i686-w64-mingw32
 
 <span class="function">cd</span> rtmpdump
 <span class="instance-variable">rtmpdump_version</span>=<span class="shell"><span class="delimiter">$(</span>git describe --tags<span class="delimiter">)</span></span>
@@ -40,20 +41,20 @@ cp librtmp.dll <span class="instance-variable">$distdir</span>
 <span class="comment"># Compress files</span>
 <span class="function">cd</span> <span class="instance-variable">$distdir</span>
 <span class="comment"># strip -R .tls -o test.exe rtmpdump.exe</span>
-strip *
+<span class="instance-variable">$host</span>-strip *
 <span class="comment"># mpress -b rtmpdump.exe</span>
 upx -<span class="integer">9</span> *
 
 <span class="comment"># CREATE README</span>
 <span class="instance-variable">gcc_version</span>=<span class="shell"><span class="delimiter">$(</span>gcc -dumpversion<span class="delimiter">)</span></span>
 
-<span class="instance-variable">polarssl_version</span>=<span class="shell"><span class="delimiter">$(</span>cat <span class="string"><span class="delimiter">&lt;&lt;EOF</span><span class="content"> | gcc -</span>E -xc - | tail -1 | tr -d \&quot;
+<span class="instance-variable">polarssl_version</span>=<span class="shell"><span class="delimiter">$(</span>cat <span class="string"><span class="delimiter">&lt;&lt;EOF</span><span class="content"> | </span><span class="instance-variable">$host</span><span class="content">-gcc -</span>E -xc - | tail -1 | tr -d \&quot;
 <span class="content">#include &lt;polarssl/version.h&gt;
 P</span>OLARSSL_VERSION_STRING
 <span class="delimiter">EOF</span></span>
 <span class="delimiter">)</span></span>
 
-<span class="instance-variable">zlib_version</span>=<span class="shell"><span class="delimiter">$(</span>cat <span class="string"><span class="delimiter">&lt;&lt;EOF</span><span class="content"> | gcc -</span>E -xc - | tail -1 | tr -d \&quot;
+<span class="instance-variable">zlib_version</span>=<span class="shell"><span class="delimiter">$(</span>cat <span class="string"><span class="delimiter">&lt;&lt;EOF</span><span class="content"> | </span><span class="instance-variable">$host</span><span class="content">-gcc -</span>E -xc - | tail -1 | tr -d \&quot;
 <span class="content">#include &lt;zlib.h&gt;
 ZLIB_V</span>ERSION
 <span class="delimiter">EOF</span></span>
@@ -69,7 +70,7 @@ Built on </span><span class="instance-variable">$rtmpdump_timestamp</span>
 <span class="content">RtmpDump version </span><span class="instance-variable">$rtmpdump_version</span>
 
 <span class="content">The source code for this RtmpDump build can be found at
-    http://rtmpdump.mplayerhq.hu
+    http://github.com/svnpenn/rtmpdump
 
 This version of RtmpDump was built on
     Window 7 Ultimate Service Pack 1
